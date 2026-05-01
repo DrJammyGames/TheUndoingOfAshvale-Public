@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://f74xelrs87nh"]
+
+[ext_resource type="Script" uid="uid://brbjhw7fcecby" path="res://UI/Scripts/Dialogue/DialogueBox.gd" id="1_col7d"]
+[ext_resource type="Script" uid="uid://dvn1p3jrm2ki5" path="res://UI/Scripts/Components/TypeWriterText.gd" id="2_2cj7p"]
+[ext_resource type="Texture2D" uid="uid://dhud3dkn4yf1u" path="res://UI/Sprites/sSpeakerPanel.png" id="3_col7d"]
+[ext_resource type="Theme" uid="uid://bm4rgr7o8i8eo" path="res://FX/Themes/TitleLabelTheme.tres" id="4_s84ue"]
+[ext_resource type="StyleBox" uid="uid://kw7n7xi2ppve" path="res://FX/Themes/DialogueBox.tres" id="6_4k31w"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="7_typ73"]
+[ext_resource type="FontFile" uid="uid://ywcja6gmq364" path="res://UI/Font/FantasyRPGtext (size 8).ttf" id="8_bdx8w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cj7p"]
+texture = ExtResource("3_col7d")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[node name="DialogueBox" type="Control" unique_id=739193701]
+custom_minimum_size = Vector2(480, 100)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -89.0
+offset_right = 240.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_col7d")
+panel_root_path = NodePath("DialogueRoot")
+
+[node name="DialogueRoot" type="Control" parent="." unique_id=964124319]
+custom_minimum_size = Vector2(480, 260)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -264.0
+offset_right = 240.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TypewriteText" type="Control" parent="DialogueRoot" unique_id=1023077166]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_2cj7p")
+target_label_path = NodePath("../DialoguePanel/Control/VBox/DialogueText")
+
+[node name="SpeakerPanel" type="Panel" parent="DialogueRoot" unique_id=3485377]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -16.0
+offset_right = 172.0
+offset_bottom = 32.0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2cj7p")
+
+[node name="SpeakerLabel" type="Label" parent="DialogueRoot/SpeakerPanel" unique_id=1469653729]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 24)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 152.0
+offset_bottom = 40.0
+theme = ExtResource("4_s84ue")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.22745098, 0.16862746, 0.16862746, 1)
+theme_override_font_sizes/font_size = 27
+vertical_alignment = 1
+
+[node name="DialoguePanel" type="Panel" parent="DialogueRoot" unique_id=1599668044]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(480, 110)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -110.0
+offset_right = 240.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("6_4k31w")
+
+[node name="Control" type="Control" parent="DialogueRoot/DialoguePanel" unique_id=1522577847]
+anchors_preset = 0
+offset_left = 22.0
+offset_top = 21.0
+offset_right = 460.0
+offset_bottom = 89.0
+
+[node name="VBox" type="VBoxContainer" parent="DialogueRoot/DialoguePanel/Control" unique_id=337973768]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 437.0
+offset_bottom = 90.0
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueRoot/DialoguePanel/Control/VBox" unique_id=146911875]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme = ExtResource("7_typ73")
+theme_override_colors/default_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.22745098, 0.16862746, 0.16862746, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_font_sizes/normal_font_size = 24
+autowrap_mode = 2
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="DialogueRoot/DialoguePanel/Control/VBox" unique_id=137083401]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HintLabel" type="Label" parent="DialogueRoot/DialoguePanel/Control/VBox" unique_id=1551347707]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_typ73")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.22745098, 0.16862746, 0.16862746, 1)
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("8_bdx8w")
+vertical_alignment = 1

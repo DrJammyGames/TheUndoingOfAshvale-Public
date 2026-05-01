@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://nv885qhbrjo6"]
+
+[ext_resource type="Script" uid="uid://cuakoly4vjsut" path="res://UI/Scripts/Quests/QuestCompleteBanner.gd" id="1_ltr5t"]
+[ext_resource type="Theme" uid="uid://bm4rgr7o8i8eo" path="res://FX/Themes/TitleLabelTheme.tres" id="2_uw7f8"]
+[ext_resource type="Texture2D" uid="uid://b6rv82n2o1ifc" path="res://UI/Sprites/sQuestBanner.png" id="2_v6kqe"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="3_t40sh"]
+[ext_resource type="PackedScene" uid="uid://oypclda4jvs5" path="res://UI/StyledNormalLabel.tscn" id="5_w4u2t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pnpuu"]
+texture = ExtResource("2_v6kqe")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+
+[node name="QuestCompleteBanner" type="Control" unique_id=1842144950]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ltr5t")
+
+[node name="Panel" type="Panel" parent="." unique_id=2009363760]
+custom_minimum_size = Vector2(480, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -71.0
+offset_right = 240.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pnpuu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=376181259]
+custom_minimum_size = Vector2(440, 72)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -51.0
+offset_right = 220.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -4
+
+[node name="TitleLabel" type="Label" parent="Panel/VBoxContainer" unique_id=188319314]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme = ExtResource("2_uw7f8")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 1
+theme_override_font_sizes/font_size = 36
+text = "Quest Completed!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestName" type="Label" parent="Panel/VBoxContainer" unique_id=1633406815]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(440, 32)
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("3_t40sh")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_font_sizes/font_size = 32
+text = "Testing"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ContinueLabel" parent="Panel/VBoxContainer" unique_id=180862782 instance=ExtResource("5_w4u2t")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Press any key to continue"
+horizontal_alignment = 1
+vertical_alignment = 1

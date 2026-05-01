@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://c1v3jocuyy6yf"]
+
+[ext_resource type="Texture2D" uid="uid://ix8jscgsggij" path="res://Entities/Items/Sprites/Consumables/sMediumHealthPotion.png" id="1_bgwd3"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="2_bgwd3"]
+
+[resource]
+script = ExtResource("2_bgwd3")
+item_id = "potion_health_medium"
+type = 1
+icon_inv = ExtResource("1_bgwd3")
+icon_world = ExtResource("1_bgwd3")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

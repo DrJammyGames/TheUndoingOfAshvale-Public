@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ca3v1knkuq7ti"]
+
+[ext_resource type="Script" uid="uid://t4nam36uqcat" path="res://UI/Scripts/OtherMenus/DayBar.gd" id="1_tmd3v"]
+[ext_resource type="Texture2D" uid="uid://c7s5vlij8rqdj" path="res://UI/Sprites/sMoonIcon.png" id="2_liqer"]
+[ext_resource type="Texture2D" uid="uid://byynm3yk5svr7" path="res://UI/Sprites/sSunIcon.png" id="2_w80mt"]
+[ext_resource type="Texture2D" uid="uid://dav6p0xp2jawm" path="res://UI/Sprites/sHealthBarBackground.png" id="3_w80mt"]
+[ext_resource type="Texture2D" uid="uid://bh7mgjntgkbro" path="res://UI/Sprites/sDayBar.png" id="4_tn3qi"]
+
+[node name="DayBar" type="HBoxContainer" unique_id=65550939]
+offset_right = 160.0
+offset_bottom = 32.0
+theme_override_constants/separation = 0
+script = ExtResource("1_tmd3v")
+
+[node name="SunIcon" type="TextureRect" parent="." unique_id=796985675]
+unique_name_in_owner = true
+self_modulate = Color(0.9607843, 0.9019608, 0.78431374, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_w80mt")
+stretch_mode = 5
+
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=2067195496]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 8)
+layout_mode = 2
+size_flags_vertical = 4
+texture_under = ExtResource("3_w80mt")
+texture_progress = ExtResource("4_tn3qi")
+texture_progress_offset = Vector2(8, 14)
+
+[node name="MoonIcon" type="TextureRect" parent="." unique_id=1620122381]
+unique_name_in_owner = true
+self_modulate = Color(0.9607843, 0.9019608, 0.78431374, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_liqer")
+stretch_mode = 5

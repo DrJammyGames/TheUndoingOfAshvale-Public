@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c7t8bxawvs6e7"]
+
+[ext_resource type="Script" uid="uid://bvrpobd1rwarb" path="res://UI/Scripts/Components/ArmorSlot.gd" id="1_ywjpq"]
+[ext_resource type="Texture2D" uid="uid://cd0gyaoi4ed26" path="res://UI/Sprites/sItemSlot.png" id="2_0l7ps"]
+
+[node name="ArmorSlot" type="TextureButton" unique_id=300271766]
+custom_minimum_size = Vector2(32, 32)
+script = ExtResource("1_ywjpq")
+
+[node name="SlotBG" type="TextureRect" parent="." unique_id=2084855360]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_0l7ps")
+
+[node name="EmptyIcon" type="TextureRect" parent="." unique_id=1596527840]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=178230487]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

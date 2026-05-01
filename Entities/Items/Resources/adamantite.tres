@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://dmqrq2wevtgua"]
+
+[ext_resource type="Texture2D" uid="uid://cbq31om7ve225" path="res://Entities/Items/Sprites/InvIcons/sAdamantiteOreInv.png" id="1_benku"]
+[ext_resource type="Texture2D" uid="uid://dts28pk48esux" path="res://Entities/Items/Sprites/Resources/sAdamantiteDrop.png" id="2_sr8af"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="3_benku"]
+
+[resource]
+script = ExtResource("3_benku")
+item_id = "adamantite"
+type = 2
+icon_inv = ExtResource("1_benku")
+icon_world = ExtResource("2_sr8af")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

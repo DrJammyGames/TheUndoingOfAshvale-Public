@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dj10uk1co77au"]
+
+[ext_resource type="Shader" uid="uid://kgr7cabaj52f" path="res://FX/Shaders/FloatingTextShader.gdshader" id="1_v4dd0"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_v4dd0")
+shader_parameter/curvature = 6.0
+shader_parameter/wobble_amplitude = 1.0
+shader_parameter/wobble_speed = 3.0
+shader_parameter/text_width = 100.0

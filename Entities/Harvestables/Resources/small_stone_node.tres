@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://y70oqmf631ax"]
+
+[ext_resource type="Resource" uid="uid://bny7me68lmidk" path="res://Entities/Items/Resources/stone.tres" id="1_887v8"]
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="1_fe7pi"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_j0ilp"]
+[ext_resource type="Texture2D" uid="uid://dry10lv88am82" path="res://UI/Sprites/EncyclopediaIcons/sSmallStoneEncyclopedia.png" id="2_v472o"]
+[ext_resource type="Texture2D" uid="uid://ds32dk3gnbhy6" path="res://Entities/Harvestables/Sprites/sDepositSmallStone1A.png" id="4_v472o"]
+[ext_resource type="Texture2D" uid="uid://pnqlr7yyhx5r" path="res://Entities/Harvestables/Sprites/sDepositSmallStone1B.png" id="5_2j08n"]
+[ext_resource type="Texture2D" uid="uid://w07rt4paedec" path="res://Entities/Harvestables/Sprites/sDepositSmallStone2A.png" id="6_yoyai"]
+[ext_resource type="Texture2D" uid="uid://ckeawp6ym5xg8" path="res://Entities/Harvestables/Sprites/sDepositSmallStone2B.png" id="7_jow68"]
+
+[resource]
+script = ExtResource("1_j0ilp")
+harvest_id = "small_stone_node"
+max_hits = 3
+drop_item = ExtResource("1_887v8")
+drop_amount_max = 3
+xp_reward = 5
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("4_v472o"), ExtResource("5_2j08n"), ExtResource("6_yoyai"), ExtResource("7_jow68")])
+encyclopedia_icon = ExtResource("2_v472o")
+hit_sfx = ExtResource("1_fe7pi")
+node_size = 0
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

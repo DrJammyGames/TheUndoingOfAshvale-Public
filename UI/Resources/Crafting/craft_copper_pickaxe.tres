@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="RecipeDataResource" format=3 uid="uid://cwvgo6qnasmkj"]
+
+[ext_resource type="Script" uid="uid://c76cib2uqwufp" path="res://UI/Scripts/Crafting/RecipeIngredientData.gd" id="1_cvhbw"]
+[ext_resource type="Resource" uid="uid://lt0mytkq32dq" path="res://Entities/Items/Resources/copper_ingot.tres" id="2_dvtxr"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="3_dhqkh"]
+[ext_resource type="Resource" uid="uid://dcl1tbmf8i0sb" path="res://Entities/Items/Resources/copper_pickaxe.tres" id="4_cvhbw"]
+[ext_resource type="Script" uid="uid://bkfkn6ullfvu2" path="res://UI/Scripts/Crafting/RecipeDataResource.gd" id="5_sinw2"]
+
+[sub_resource type="Resource" id="Resource_n7efc"]
+script = ExtResource("1_cvhbw")
+item = ExtResource("2_dvtxr")
+amount = 2
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[sub_resource type="Resource" id="Resource_tgoix"]
+script = ExtResource("1_cvhbw")
+item = ExtResource("3_dhqkh")
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[resource]
+script = ExtResource("5_sinw2")
+recipe_id = "craft_copper_pickaxe"
+recipe_type = 1
+result_item = ExtResource("4_cvhbw")
+ingredients = Array[ExtResource("1_cvhbw")]([SubResource("Resource_n7efc"), SubResource("Resource_tgoix")])
+unlock_source = 1
+xp_reward = 20
+time_cost_ticks = 1.5
+required_level = 5
+metadata/_custom_type_script = "uid://bkfkn6ullfvu2"

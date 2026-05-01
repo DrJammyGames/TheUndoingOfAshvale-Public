@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://b42xhea05c13n"]
+
+[ext_resource type="Script" uid="uid://rwpgl5ureyiw" path="res://Entities/NPCs/Scripts/NPC.gd" id="1_tdvfm"]
+[ext_resource type="Script" uid="uid://bq4h253tgwxyv" path="res://Entities/NPCs/Scripts/NPCInteractionArea.gd" id="2_lhmbd"]
+[ext_resource type="Texture2D" uid="uid://ci18iyxg4a8ol" path="res://UI/Sprites/sAlert.png" id="3_ab4le"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tmffu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhmbd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fo5tq"]
+size = Vector2(30, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ot2qq"]
+atlas = ExtResource("3_ab4le")
+region = Rect2(0, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6py3"]
+atlas = ExtResource("3_ab4le")
+region = Rect2(32, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wc1i"]
+atlas = ExtResource("3_ab4le")
+region = Rect2(64, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hql64"]
+atlas = ExtResource("3_ab4le")
+region = Rect2(96, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m6a4"]
+atlas = ExtResource("3_ab4le")
+region = Rect2(128, 0, 32, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8q5yj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ot2qq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6py3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wc1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hql64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m6a4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="NPC" type="CharacterBody2D" unique_id=125569906]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_tdvfm")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=152970934]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_tmffu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1200333245]
+shape = SubResource("RectangleShape2D_lhmbd")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=776062382]
+unique_name_in_owner = true
+collision_layer = 20
+collision_mask = 2
+collision_priority = 2.0
+priority = 2
+script = ExtResource("2_lhmbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=716357069]
+shape = SubResource("RectangleShape2D_fo5tq")
+debug_color = Color(0, 0.6, 0.2, 0.41960785)
+
+[node name="QuestIndicator" type="AnimatedSprite2D" parent="." unique_id=1296577152]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_8q5yj")
+autoplay = "default"

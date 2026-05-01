@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://bga876v481l27"]
+
+[ext_resource type="Texture2D" uid="uid://duqn7f23aqb4m" path="res://Entities/Items/Sprites/Consumables/sLargeHealthPotion.png" id="1_hqer6"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="2_hqer6"]
+
+[resource]
+script = ExtResource("2_hqer6")
+item_id = "potion_health_large"
+type = 1
+icon_inv = ExtResource("1_hqer6")
+icon_world = ExtResource("1_hqer6")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

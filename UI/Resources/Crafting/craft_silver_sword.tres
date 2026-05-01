@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="RecipeDataResource" format=3 uid="uid://s2d76cu2ycuu"]
+
+[ext_resource type="Script" uid="uid://c76cib2uqwufp" path="res://UI/Scripts/Crafting/RecipeIngredientData.gd" id="1_oilcp"]
+[ext_resource type="Resource" uid="uid://d37gtphkacr2l" path="res://Entities/Items/Resources/silver_ingot.tres" id="2_dfq7g"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="3_5lcl4"]
+[ext_resource type="Resource" uid="uid://desnmk5hbrq6c" path="res://Entities/Items/Resources/silver_sword.tres" id="4_oilcp"]
+[ext_resource type="Script" uid="uid://bkfkn6ullfvu2" path="res://UI/Scripts/Crafting/RecipeDataResource.gd" id="5_obeos"]
+
+[sub_resource type="Resource" id="Resource_n7efc"]
+script = ExtResource("1_oilcp")
+item = ExtResource("2_dfq7g")
+amount = 2
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[sub_resource type="Resource" id="Resource_tgoix"]
+script = ExtResource("1_oilcp")
+item = ExtResource("3_5lcl4")
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[resource]
+script = ExtResource("5_obeos")
+recipe_id = "craft_silver_sword"
+recipe_type = 1
+result_item = ExtResource("4_oilcp")
+ingredients = Array[ExtResource("1_oilcp")]([SubResource("Resource_n7efc"), SubResource("Resource_tgoix")])
+unlock_source = 1
+xp_reward = 25
+time_cost_ticks = 1.75
+required_level = 7
+metadata/_custom_type_script = "uid://bkfkn6ullfvu2"

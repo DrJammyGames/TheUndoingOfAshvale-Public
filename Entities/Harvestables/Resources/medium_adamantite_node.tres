@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://cjyofa2vc4unc"]
+
+[ext_resource type="Resource" uid="uid://dmqrq2wevtgua" path="res://Entities/Items/Resources/adamantite.tres" id="1_bg4gj"]
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="1_gcugb"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_gf1m3"]
+[ext_resource type="Texture2D" uid="uid://wn0o5qiukuwb" path="res://UI/Sprites/EncyclopediaIcons/sMediumAdamantiteEncyclopedia.png" id="2_iwyrg"]
+[ext_resource type="Texture2D" uid="uid://yfktwgvbbqm1" path="res://Entities/Harvestables/Sprites/sDepositMediumAdamantite.png" id="3_bg4gj"]
+
+[resource]
+script = ExtResource("1_gf1m3")
+harvest_id = "medium_adamantite_node"
+max_hits = 8
+drop_item = ExtResource("1_bg4gj")
+drop_amount_min = 3
+drop_amount_max = 6
+xp_reward = 15
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("3_bg4gj")])
+encyclopedia_icon = ExtResource("2_iwyrg")
+hit_sfx = ExtResource("1_gcugb")
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

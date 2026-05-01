@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://cfhev655skifx"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_b1lur"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_3q0x3"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_ektcm"]
+
+[sub_resource type="Resource" id="Resource_nkxvp"]
+script = ExtResource("1_b1lur")
+speaker_id = 2
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_ektcm")
+dialogue_id = "blacksmith_fallback"
+npc_id = 1
+is_fallback = true
+lines = Array[ExtResource("1_b1lur")]([SubResource("Resource_nkxvp")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

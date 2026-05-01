@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://ds7456mthkasx"]
+
+[ext_resource type="Script" uid="uid://l7i3q38nro87" path="res://UI/Scripts/OtherMenus/TitleScreen.gd" id="1_mv2ql"]
+[ext_resource type="Shader" uid="uid://e15fcg2xpkhx" path="res://FX/Shaders/DaySky.gdshader" id="2_ci5j5"]
+[ext_resource type="StyleBox" uid="uid://cvngassbhgv46" path="res://FX/Themes/MenusBackground.tres" id="3_7kk7w"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="3_hwryw"]
+[ext_resource type="PackedScene" uid="uid://ctd4l0lth70ed" path="res://UI/Scenes/Buttons/StyledButton.tscn" id="5_hwryw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k6067"]
+shader = ExtResource("2_ci5j5")
+
+[node name="TitleScreen" type="Control" unique_id=1410105277]
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_mv2ql")
+
+[node name="TitleCamera" type="Camera2D" parent="." unique_id=711319584]
+unique_name_in_owner = true
+offset = Vector2(320, 180)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=944735213]
+material = SubResource("ShaderMaterial_k6067")
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="GameTitle" type="Label" parent="." unique_id=1317882405]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 21.0
+offset_right = 641.0
+offset_bottom = 59.0
+theme = ExtResource("3_hwryw")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 48
+text = "The Undoing of Ashvale"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="PanelContainer" parent="." unique_id=725532804]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -120.5
+offset_right = 97.0
+offset_bottom = 158.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("3_7kk7w")
+
+[node name="MenuRoot" type="VBoxContainer" parent="CenterContainer" unique_id=146753285]
+layout_mode = 2
+
+[node name="NewGameButton" parent="CenterContainer/MenuRoot" unique_id=89572225 instance=ExtResource("5_hwryw")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 1
+text = "New Game"
+
+[node name="ContinueButton" parent="CenterContainer/MenuRoot" unique_id=611939176 instance=ExtResource("5_hwryw")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 1
+text = "Continue"
+
+[node name="LoadButton" parent="CenterContainer/MenuRoot" unique_id=2068243114 instance=ExtResource("5_hwryw")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 1
+text = "Load"
+
+[node name="OptionsButton" parent="CenterContainer/MenuRoot" unique_id=1836717651 instance=ExtResource("5_hwryw")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 1
+text = "Options"
+
+[node name="QuitButton" parent="CenterContainer/MenuRoot" unique_id=1180933197 instance=ExtResource("5_hwryw")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 1
+text = "Quit to Desktop"

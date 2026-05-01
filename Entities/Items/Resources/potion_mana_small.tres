@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://cklwoex5m5ded"]
+
+[ext_resource type="Texture2D" uid="uid://c0xpehb1hgtsk" path="res://Entities/Items/Sprites/Consumables/sSmallManaPotion.png" id="1_nawnc"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="2_nawnc"]
+
+[resource]
+script = ExtResource("2_nawnc")
+item_id = "potion_mana_small"
+type = 1
+icon_inv = ExtResource("1_nawnc")
+icon_world = ExtResource("1_nawnc")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

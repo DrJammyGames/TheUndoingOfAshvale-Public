@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dx0vi1ylv0df8"]
+
+[ext_resource type="StyleBox" uid="uid://cvngassbhgv46" path="res://FX/Themes/MenusBackground.tres" id="1_cbl15"]
+[ext_resource type="Script" uid="uid://vjcenvx17n6l" path="res://UI/Scripts/OtherMenus/GameOverScreen.gd" id="1_f1io7"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="2_f1io7"]
+[ext_resource type="StyleBox" uid="uid://dqke5y8beb8tk" path="res://FX/Themes/MainMenuButtonNormal.tres" id="3_f87xd"]
+[ext_resource type="StyleBox" uid="uid://brigo1ejj34a5" path="res://FX/Themes/MainMenuButtonPressed.tres" id="4_i0rgq"]
+[ext_resource type="StyleBox" uid="uid://jfw088ie8ppi" path="res://FX/Themes/MainMenuButtonSelected.tres" id="5_5sftc"]
+[ext_resource type="Script" uid="uid://cfsv2joqpwwod" path="res://UI/Scripts/Components/HoverButton.gd" id="6_15oep"]
+
+[node name="GameOverScreen" type="Control" unique_id=261853194]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f1io7")
+
+[node name="GameOverRoot" type="Control" parent="." unique_id=186687323]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="GameOverRoot" unique_id=270942158]
+custom_minimum_size = Vector2(260, 120)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -60.0
+offset_right = 130.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_cbl15")
+
+[node name="GameOverLabel" type="Label" parent="GameOverRoot/Panel" unique_id=10821739]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 22.0
+offset_top = 24.0
+offset_right = 240.0
+offset_bottom = 50.0
+theme = ExtResource("2_f1io7")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 32
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="LoadSaveButton" type="Button" parent="GameOverRoot/Panel" unique_id=735755006]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 22.0
+offset_top = 62.0
+offset_right = 127.0
+offset_bottom = 99.0
+theme = ExtResource("2_f1io7")
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("3_f87xd")
+theme_override_styles/pressed = ExtResource("4_i0rgq")
+theme_override_styles/hover = ExtResource("5_5sftc")
+text = "Load Last Save"
+script = ExtResource("6_15oep")
+
+[node name="ReturnTitleButton" type="Button" parent="GameOverRoot/Panel" unique_id=253747719]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 136.0
+offset_top = 62.0
+offset_right = 238.0
+offset_bottom = 99.0
+theme = ExtResource("2_f1io7")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("3_f87xd")
+theme_override_styles/pressed = ExtResource("4_i0rgq")
+theme_override_styles/hover = ExtResource("5_5sftc")
+text = "Return to Title"
+script = ExtResource("6_15oep")

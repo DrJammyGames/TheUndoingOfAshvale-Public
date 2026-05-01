@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://dbcg3kcixd0f0"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_fquin"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_ngllq"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_qqirk"]
+
+[sub_resource type="Resource" id="Resource_7fbw2"]
+script = ExtResource("1_fquin")
+speaker_id = 3
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_qqirk")
+dialogue_id = "witch_fallback"
+npc_id = 2
+is_fallback = true
+lines = Array[ExtResource("1_fquin")]([SubResource("Resource_7fbw2")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

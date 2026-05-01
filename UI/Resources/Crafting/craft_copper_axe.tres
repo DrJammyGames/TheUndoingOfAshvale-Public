@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="RecipeDataResource" format=3 uid="uid://d2ev03anxcdqe"]
+
+[ext_resource type="Script" uid="uid://c76cib2uqwufp" path="res://UI/Scripts/Crafting/RecipeIngredientData.gd" id="1_rauyq"]
+[ext_resource type="Resource" uid="uid://lt0mytkq32dq" path="res://Entities/Items/Resources/copper_ingot.tres" id="2_rauyq"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="3_xtkpo"]
+[ext_resource type="Resource" uid="uid://3qywxdrkjqs8" path="res://Entities/Items/Resources/copper_axe.tres" id="4_sh0eq"]
+[ext_resource type="Script" uid="uid://bkfkn6ullfvu2" path="res://UI/Scripts/Crafting/RecipeDataResource.gd" id="5_yjuj3"]
+
+[sub_resource type="Resource" id="Resource_n7efc"]
+script = ExtResource("1_rauyq")
+item = ExtResource("2_rauyq")
+amount = 2
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[sub_resource type="Resource" id="Resource_tgoix"]
+script = ExtResource("1_rauyq")
+item = ExtResource("3_xtkpo")
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[resource]
+script = ExtResource("5_yjuj3")
+recipe_id = "craft_copper_axe"
+recipe_type = 1
+result_item = ExtResource("4_sh0eq")
+ingredients = Array[ExtResource("1_rauyq")]([SubResource("Resource_n7efc"), SubResource("Resource_tgoix")])
+unlock_source = 1
+xp_reward = 20
+time_cost_ticks = 1.5
+required_level = 5
+metadata/_custom_type_script = "uid://bkfkn6ullfvu2"

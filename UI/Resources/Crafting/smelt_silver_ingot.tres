@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="RecipeDataResource" format=3 uid="uid://dey88v4khblo8"]
+
+[ext_resource type="Script" uid="uid://c76cib2uqwufp" path="res://UI/Scripts/Crafting/RecipeIngredientData.gd" id="1_p8f16"]
+[ext_resource type="Resource" uid="uid://djpangrfmfxrv" path="res://Entities/Items/Resources/silver.tres" id="2_p8f16"]
+[ext_resource type="Resource" uid="uid://pmdu1fq4d6ot" path="res://Entities/Items/Resources/coal.tres" id="3_dhqh7"]
+[ext_resource type="Resource" uid="uid://d37gtphkacr2l" path="res://Entities/Items/Resources/silver_ingot.tres" id="4_alfm5"]
+[ext_resource type="Script" uid="uid://bkfkn6ullfvu2" path="res://UI/Scripts/Crafting/RecipeDataResource.gd" id="5_415oy"]
+
+[sub_resource type="Resource" id="Resource_8jflp"]
+script = ExtResource("1_p8f16")
+item = ExtResource("2_p8f16")
+amount = 3
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[sub_resource type="Resource" id="Resource_o6mcp"]
+script = ExtResource("1_p8f16")
+item = ExtResource("3_dhqh7")
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[resource]
+script = ExtResource("5_415oy")
+recipe_id = "smelt_silver_ingot"
+result_item = ExtResource("4_alfm5")
+ingredients = Array[ExtResource("1_p8f16")]([SubResource("Resource_8jflp"), SubResource("Resource_o6mcp")])
+xp_reward = 12
+time_cost_ticks = 1.25
+metadata/_custom_type_script = "uid://bkfkn6ullfvu2"

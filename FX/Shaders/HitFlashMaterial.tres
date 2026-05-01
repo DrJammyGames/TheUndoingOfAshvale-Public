@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://yuptrsrdiyp3"]
+
+[ext_resource type="Shader" uid="uid://4aw0xnbuissh" path="res://FX/Shaders/HitFlashShader.gdshader" id="1_v1wro"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_v1wro")
+shader_parameter/speed = 1.0
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.1
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.6000000285
+shader_parameter/offset = 0.0
+shader_parameter/enable_wind = true
+shader_parameter/shock_color = Color(1, 0.9607843, 0.9098039, 1)
+shader_parameter/hit_amplitude = 0.5
+shader_parameter/hit_frequency = 30.0
+shader_parameter/hit_amount = 0.0

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="QuestDataResource" format=3 uid="uid://7hnyfipg4p5s"]
+
+[ext_resource type="Script" uid="uid://bopnb8lkb8atb" path="res://UI/Scripts/Quests/QuestDataResource.gd" id="1_ft3w7"]
+[ext_resource type="Script" uid="uid://dhvb73tym44qf" path="res://UI/Scripts/Quests/QuestStepsResource.gd" id="2_maedt"]
+[ext_resource type="Resource" uid="uid://du5jrf8rlfnrs" path="res://UI/Resources/Quests/q_intro.tres" id="2_prywl"]
+
+[sub_resource type="Resource" id="Resource_otqyu"]
+script = ExtResource("2_maedt")
+condition_value = "caretaker"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_vvtxf"]
+script = ExtResource("2_maedt")
+event_type = 1
+condition_key = 1
+condition_value = "wood"
+condition_amount = 10
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_bass1"]
+script = ExtResource("2_maedt")
+event_type = 3
+condition_key = 1
+condition_value = "wood"
+condition_amount = 10
+consume_amount = 10
+condition_2_key = 0
+condition_2_value = "caretaker"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[resource]
+script = ExtResource("1_ft3w7")
+quest_id = "q_rebuild_town_hall"
+xp_reward = 50
+prereq_quests = Array[ExtResource("1_ft3w7")]([ExtResource("2_prywl")])
+steps = Array[ExtResource("2_maedt")]([SubResource("Resource_otqyu"), SubResource("Resource_vvtxf"), SubResource("Resource_bass1")])
+metadata/_custom_type_script = "uid://bopnb8lkb8atb"

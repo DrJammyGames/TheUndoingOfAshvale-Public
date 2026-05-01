@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://r5ptgjr57g20"]
+
+[ext_resource type="Script" uid="uid://bdkahe2nj0adt" path="res://UI/Scripts/Dialogue/DialogueLogEntry.gd" id="1_l3w4h"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="3_c52q6"]
+
+[node name="DialogueLogEntry" type="HBoxContainer" unique_id=1818917370]
+offset_right = 186.0
+offset_bottom = 32.0
+size_flags_vertical = 3
+script = ExtResource("1_l3w4h")
+
+[node name="SpeakerLabel" type="Label" parent="." unique_id=2035390344]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("3_c52q6")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+
+[node name="Spacer" type="Control" parent="." unique_id=836613142]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LineLabel" type="Label" parent="." unique_id=1732274675]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(190, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("3_c52q6")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+autowrap_mode = 2

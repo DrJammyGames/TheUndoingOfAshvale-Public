@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://5i0mcr3d64dq"]
+
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_jcovg"]
+[ext_resource type="Texture2D" uid="uid://cbn72vk4mywc8" path="res://Entities/Items/Sprites/InvIcons/sGoldIngotInv.png" id="1_wgk6q"]
+
+[resource]
+script = ExtResource("1_jcovg")
+item_id = "gold_ingot"
+type = 2
+value = 40
+icon_inv = ExtResource("1_wgk6q")
+icon_world = ExtResource("1_wgk6q")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://bb00h4bwx0g5e"]
+
+[ext_resource type="Texture2D" uid="uid://dnnwfdclbxedy" path="res://Entities/Items/Sprites/Tools/sBasicSword.png" id="1_qk4fv"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="2_qk4fv"]
+
+[resource]
+script = ExtResource("2_qk4fv")
+item_id = "basic_sword"
+type = 4
+tool_category = 1
+icon_inv = ExtResource("1_qk4fv")
+icon_world = ExtResource("1_qk4fv")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

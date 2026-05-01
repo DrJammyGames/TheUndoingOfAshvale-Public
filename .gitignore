@@ -1,0 +1,29 @@
+# Godot import cache and editor data
+.godot/
+
+# Proprietary assets — not included in public repo
+**/Sprites/
+**/Sounds/
+UI/Font/*.ttf
+UI/Font/*.otf
+
+# Stray binary assets
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.wav
+*.ogg
+*.mp3
+*.ttf
+*.otf
+*.woff
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Godot export
+*.export
+export_presets.cfg

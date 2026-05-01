@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://cp1ryx8psejhv"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_mpu10"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_s3qga"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_sgp6h"]
+
+[sub_resource type="Resource" id="Resource_yebds"]
+script = ExtResource("1_mpu10")
+speaker_id = 3
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_ijqyl"]
+script = ExtResource("1_mpu10")
+speaker_id = 3
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_84p54"]
+script = ExtResource("1_mpu10")
+speaker_id = 3
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_7wfga"]
+script = ExtResource("1_mpu10")
+speaker_id = 0
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_y8npf"]
+script = ExtResource("1_mpu10")
+speaker_id = 3
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_ntmnr"]
+script = ExtResource("1_mpu10")
+speaker_id = 3
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_sgp6h")
+dialogue_id = "witch_requirements"
+npc_id = 2
+for_quest_id = "q_rebuild_alchemist"
+quest_state = 1
+min_step_index = 0
+max_step_index = 3
+lines = Array[ExtResource("1_mpu10")]([SubResource("Resource_yebds"), SubResource("Resource_ijqyl"), SubResource("Resource_84p54"), SubResource("Resource_7wfga"), SubResource("Resource_y8npf"), SubResource("Resource_ntmnr")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://cww385rai4b70"]
+
+[ext_resource type="Script" uid="uid://cjhwy34gobqpk" path="res://Entities/Harvestables/Scripts/HarvestableNode.gd" id="1_cxvp6"]
+[ext_resource type="Material" uid="uid://yuptrsrdiyp3" path="res://FX/Shaders/HitFlashMaterial.tres" id="2_wh5gv"]
+[ext_resource type="Texture2D" uid="uid://d2la6q005qeeo" path="res://FX/Sprites/sSmokeEffect.png" id="3_6xxms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh5gv"]
+
+[sub_resource type="Animation" id="Animation_6xxms"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p3tkk"]
+resource_name = "break"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.19),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 0.9), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_672xi"]
+_data = {
+&"RESET": SubResource("Animation_6xxms"),
+&"break": SubResource("Animation_p3tkk")
+}
+
+[sub_resource type="Gradient" id="Gradient_6xxms"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_p3tkk"]
+gradient = SubResource("Gradient_6xxms")
+
+[sub_resource type="Curve" id="Curve_672xi"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.42896172, 0.6578244), 0.0, 0.0, 0, 0, Vector2(0.9808743, 0.048324108), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_g2if4"]
+curve = SubResource("Curve_672xi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hb31q"]
+lifetime_randomness = 0.2
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(10, 5, 1)
+angle_min = -59.99999
+angle_max = 60.00001
+radial_velocity_min = -50.000023
+radial_velocity_max = 49.999977
+gravity = Vector3(0, -50, 0)
+tangential_accel_min = 9.999997
+tangential_accel_max = 19.999998
+scale_curve = SubResource("CurveTexture_g2if4")
+color_ramp = SubResource("GradientTexture1D_p3tkk")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdxdj"]
+size = Vector2(20, 36)
+
+[node name="HarvestableNode" type="Area2D" unique_id=1131220649]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_cxvp6")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=315354019]
+unique_name_in_owner = true
+material = ExtResource("2_wh5gv")
+
+[node name="InteractionArea" type="CollisionShape2D" parent="." unique_id=435405339]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_wh5gv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1120255487]
+libraries/ = SubResource("AnimationLibrary_672xi")
+
+[node name="Dust" type="GPUParticles2D" parent="." unique_id=1990381213]
+unique_name_in_owner = true
+modulate = Color(0.47263712, 0.2358579, 0.023888351, 0.49019608)
+self_modulate = Color(0.4745098, 0.23529412, 0.023529412, 0.1764706)
+texture_filter = 1
+emitting = false
+amount = 35
+texture = ExtResource("3_6xxms")
+lifetime = 1.5
+one_shot = true
+randomness = 0.2
+fixed_fps = 0
+process_material = SubResource("ParticleProcessMaterial_hb31q")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1405178419]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1386929028]
+shape = SubResource("RectangleShape2D_kdxdj")

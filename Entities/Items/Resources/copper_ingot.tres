@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://lt0mytkq32dq"]
+
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_cx8gt"]
+[ext_resource type="Texture2D" uid="uid://q78031bi4mrl" path="res://Entities/Items/Sprites/InvIcons/sCopperIngotInv.png" id="1_vnlgr"]
+
+[resource]
+script = ExtResource("1_cx8gt")
+item_id = "copper_ingot"
+type = 2
+value = 20
+icon_inv = ExtResource("1_vnlgr")
+icon_world = ExtResource("1_vnlgr")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

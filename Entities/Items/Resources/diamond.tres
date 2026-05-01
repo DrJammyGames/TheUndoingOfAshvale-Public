@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://jus1bxdvmuhu"]
+
+[ext_resource type="Texture2D" uid="uid://dj0jlt2jfa6jb" path="res://Entities/Items/Sprites/InvIcons/sDiamondOreInv.png" id="1_rs2y3"]
+[ext_resource type="Texture2D" uid="uid://can00lt0ufkfw" path="res://Entities/Items/Sprites/Resources/sDiamondDrop.png" id="2_cvg2i"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="3_rs2y3"]
+
+[resource]
+script = ExtResource("3_rs2y3")
+item_id = "diamond"
+type = 2
+icon_inv = ExtResource("1_rs2y3")
+icon_world = ExtResource("2_cvg2i")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

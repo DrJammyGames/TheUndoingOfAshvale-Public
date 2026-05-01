@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://dkinr8jo7mxtg"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_bis32"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_dhfr3"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_fw478"]
+
+[sub_resource type="Resource" id="Resource_vmipv"]
+script = ExtResource("1_bis32")
+speaker_id = 2
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_hktk5"]
+script = ExtResource("1_bis32")
+speaker_id = 0
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_26kg1"]
+script = ExtResource("1_bis32")
+speaker_id = 2
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_fw478")
+dialogue_id = "blacksmith_intro"
+npc_id = 1
+for_quest_id = "q_intro"
+quest_state = 2
+min_step_index = 1
+max_step_index = 1
+lines = Array[ExtResource("1_bis32")]([SubResource("Resource_vmipv"), SubResource("Resource_hktk5"), SubResource("Resource_26kg1")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

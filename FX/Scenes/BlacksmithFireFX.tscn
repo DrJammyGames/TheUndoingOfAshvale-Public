@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cif3da3g6jtcs"]
+
+[ext_resource type="Texture2D" uid="uid://r1s1jf76qjrw" path="res://Tiles/tsFurnace.png" id="1_2tmf7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tmf7"]
+atlas = ExtResource("1_2tmf7")
+region = Rect2(0, 16, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wycen"]
+atlas = ExtResource("1_2tmf7")
+region = Rect2(96, 16, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qae1t"]
+atlas = ExtResource("1_2tmf7")
+region = Rect2(192, 16, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jqu5"]
+atlas = ExtResource("1_2tmf7")
+region = Rect2(288, 16, 96, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtaut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tmf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wycen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qae1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jqu5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="BlacksmithFireFX" type="Node2D" unique_id=2017855169]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1072466440]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_wtaut")
+frame_progress = 0.8049403

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://ddj3pf0tl06e8"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_biuwr"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_520e0"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_xu1qb"]
+
+[sub_resource type="Resource" id="Resource_lbkku"]
+script = ExtResource("1_biuwr")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_xu1qb")
+dialogue_id = "caretaker_fallback"
+is_fallback = true
+lines = Array[ExtResource("1_biuwr")]([SubResource("Resource_lbkku")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

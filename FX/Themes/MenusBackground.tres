@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cvngassbhgv46"]
+
+[ext_resource type="Texture2D" uid="uid://dsuipr5upajed" path="res://UI/Sprites/sMenuBackground.png" id="1_7xw5g"]
+
+[resource]
+resource_local_to_scene = true
+texture = ExtResource("1_7xw5g")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="QuestDataResource" format=3 uid="uid://dgug52byj5lm6"]
+
+[ext_resource type="Script" uid="uid://bopnb8lkb8atb" path="res://UI/Scripts/Quests/QuestDataResource.gd" id="1_uhhko"]
+[ext_resource type="Script" uid="uid://dhvb73tym44qf" path="res://UI/Scripts/Quests/QuestStepsResource.gd" id="2_8kice"]
+[ext_resource type="Resource" uid="uid://ubfddnwp0ugf" path="res://UI/Resources/Quests/q_rebuild_alchemist.tres" id="2_qhd2k"]
+
+[sub_resource type="Resource" id="Resource_rsdlm"]
+script = ExtResource("2_8kice")
+condition_value = "witch"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_32ite"]
+script = ExtResource("2_8kice")
+event_type = 6
+condition_key = 1
+condition_value = "crafting_table"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_8kice"]
+script = ExtResource("2_8kice")
+condition_value = "witch"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[resource]
+script = ExtResource("1_uhhko")
+quest_id = "q_witch_crafting_table"
+xp_reward = 30
+prereq_quests = Array[ExtResource("1_uhhko")]([ExtResource("2_qhd2k")])
+steps = Array[ExtResource("2_8kice")]([SubResource("Resource_rsdlm"), SubResource("Resource_32ite"), SubResource("Resource_8kice")])
+metadata/_custom_type_script = "uid://bopnb8lkb8atb"

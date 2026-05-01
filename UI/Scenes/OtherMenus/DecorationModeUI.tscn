@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://b6x1k7frpea0k"]
+
+[ext_resource type="Script" uid="uid://bch5377i1yije" path="res://UI/Scripts/OtherMenus/DecorationModeUI.gd" id="1_3nsat"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="2_wn5tr"]
+[ext_resource type="StyleBox" uid="uid://dqke5y8beb8tk" path="res://FX/Themes/MainMenuButtonNormal.tres" id="3_fbagv"]
+[ext_resource type="StyleBox" uid="uid://brigo1ejj34a5" path="res://FX/Themes/MainMenuButtonPressed.tres" id="4_obtoc"]
+[ext_resource type="StyleBox" uid="uid://jfw088ie8ppi" path="res://FX/Themes/MainMenuButtonSelected.tres" id="5_y375e"]
+[ext_resource type="StyleBox" uid="uid://cvngassbhgv46" path="res://FX/Themes/MenusBackground.tres" id="6_x5r65"]
+[ext_resource type="Script" uid="uid://cfsv2joqpwwod" path="res://UI/Scripts/Components/HoverButton.gd" id="7_ixorr"]
+
+[node name="DecorationModeUI" type="Control" unique_id=1759848110]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_3nsat")
+
+[node name="Sidebar" type="Control" parent="." unique_id=1771357178]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="SidebarToggleButton" type="Button" parent="Sidebar" unique_id=915943491]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -21.5
+offset_right = -136.0
+offset_bottom = 21.5
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("2_wn5tr")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("3_fbagv")
+theme_override_styles/pressed = ExtResource("4_obtoc")
+theme_override_styles/hover = ExtResource("5_y375e")
+text = ">"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Sidebar" unique_id=685269214]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -190.5
+offset_right = -2.0
+offset_bottom = 151.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("6_x5r65")
+
+[node name="FurnitureList" type="GridContainer" parent="Sidebar/ScrollContainer" unique_id=1399503435]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="HintLabel" type="Label" parent="." unique_id=2133919533]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 488.0
+offset_bottom = 23.0
+theme = ExtResource("2_wn5tr")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "Left-click to place. Right-click to cancel. 
+WASD or edge-scroll to move camera."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1320299344]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -191.0
+offset_top = -43.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="SaveExitButton" type="Button" parent="HBoxContainer" unique_id=1398454206]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_wn5tr")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("3_fbagv")
+theme_override_styles/pressed = ExtResource("4_obtoc")
+theme_override_styles/hover = ExtResource("5_y375e")
+text = "Save and Exit"
+
+[node name="ExitButton" type="Button" parent="HBoxContainer" unique_id=1558590625]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_wn5tr")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("3_fbagv")
+theme_override_styles/pressed = ExtResource("4_obtoc")
+theme_override_styles/hover = ExtResource("5_y375e")
+text = "Exit"
+
+[node name="GhostRect" type="TextureRect" parent="." unique_id=1282580460]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="UnsavedPopup" type="Control" parent="." unique_id=481945040]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UnsavedPopup" unique_id=669436871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.5
+offset_top = -80.5
+offset_right = 139.5
+offset_bottom = 80.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("6_x5r65")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UnsavedPopup/PanelContainer" unique_id=572815515]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UnsavedPopup/PanelContainer/VBoxContainer" unique_id=112808990]
+layout_mode = 2
+theme = ExtResource("2_wn5tr")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "Exit without saving changes?"
+
+[node name="UnsavedConfirmButton" type="Button" parent="UnsavedPopup/PanelContainer/VBoxContainer" unique_id=1804537394]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_wn5tr")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("3_fbagv")
+theme_override_styles/pressed = ExtResource("4_obtoc")
+theme_override_styles/hover = ExtResource("5_y375e")
+text = "Exit Without Saving"
+script = ExtResource("7_ixorr")
+
+[node name="UnsavedCancelButton" type="Button" parent="UnsavedPopup/PanelContainer/VBoxContainer" unique_id=59060529]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_wn5tr")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("3_fbagv")
+theme_override_styles/pressed = ExtResource("4_obtoc")
+theme_override_styles/hover = ExtResource("5_y375e")
+text = "Continue Decorating"
+script = ExtResource("7_ixorr")

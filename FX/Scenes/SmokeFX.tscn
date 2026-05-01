@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://5t607fqf7xp8"]
+
+[ext_resource type="Texture2D" uid="uid://d2la6q005qeeo" path="res://FX/Sprites/sSmokeEffect.png" id="1_jn6j6"]
+[ext_resource type="Material" uid="uid://svui2fs1sl22" path="res://FX/Shaders/SmokeParticleMaterial.tres" id="2_wvqkp"]
+
+[node name="SmokeFX" type="Node2D" unique_id=1639222055]
+
+[node name="Particles" type="GPUParticles2D" parent="." unique_id=1698454952]
+amount = 60
+texture = ExtResource("1_jn6j6")
+lifetime = 3.5
+randomness = 0.2
+fixed_fps = 60
+process_material = ExtResource("2_wvqkp")

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ctdpfo7y2kg5q"]
+
+[ext_resource type="Script" uid="uid://cknetmbca7lpu" path="res://Entities/Interactables/Scripts/DoorTransitionArea.gd" id="1_bi2bv"]
+[ext_resource type="Texture2D" uid="uid://jg030b0ghmfr" path="res://Entities/Interactables/Sprites/sDoorClosed.png" id="2_jna6s"]
+[ext_resource type="Texture2D" uid="uid://b8k6pxqb4qa1i" path="res://Entities/Interactables/Sprites/sDoorOpen.png" id="3_skf2f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r1olj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jna6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_skf2f")
+}],
+"loop": false,
+"name": &"door_open",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y46g3"]
+size = Vector2(20, 22)
+
+[node name="DoorTransitionArea" type="Area2D" unique_id=1510330913]
+script = ExtResource("1_bi2bv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1830131800]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_r1olj")
+animation = &"door_open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=49972075]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_y46g3")

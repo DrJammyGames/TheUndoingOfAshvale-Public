@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://du7xvhrmpjvd6"]
+
+[ext_resource type="Script" uid="uid://dgedxmcn5l8bw" path="res://UI/Scripts/OtherMenus/LevelUpBanner.gd" id="1_chyqe"]
+[ext_resource type="Texture2D" uid="uid://b6rv82n2o1ifc" path="res://UI/Sprites/sQuestBanner.png" id="2_i3i2u"]
+[ext_resource type="Theme" uid="uid://bm4rgr7o8i8eo" path="res://FX/Themes/TitleLabelTheme.tres" id="3_8yiu3"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="4_oq4cf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pnpuu"]
+texture = ExtResource("2_i3i2u")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+
+[node name="LevelUpBanner" type="Control" unique_id=1842144950]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_chyqe")
+
+[node name="Panel" type="Panel" parent="." unique_id=2009363760]
+custom_minimum_size = Vector2(360, 240)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -48.0
+offset_right = 180.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pnpuu")
+
+[node name="TitleLabel" type="Label" parent="Panel" unique_id=188319314]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 11.0
+offset_right = 362.0
+offset_bottom = 47.0
+theme = ExtResource("3_8yiu3")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 1
+theme_override_font_sizes/font_size = 36
+text = "Level Up!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="Panel" unique_id=1233599176]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 17.0
+offset_top = 42.0
+offset_right = 343.0
+offset_bottom = 61.0
+theme = ExtResource("4_oq4cf")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+text = "1->2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=488661972]
+layout_mode = 0
+offset_top = 63.0
+offset_right = 363.0
+offset_bottom = 231.0
+alignment = 1
+
+[node name="StatsColumn" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=2051698945]
+layout_mode = 2
+
+[node name="StatsLabel" type="Label" parent="Panel/HBoxContainer/StatsColumn" unique_id=1141648419]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_oq4cf")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_constants/line_spacing = -4
+horizontal_alignment = 1
+
+[node name="InventoryLabel" type="Label" parent="Panel/HBoxContainer/StatsColumn" unique_id=1123468872]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_oq4cf")
+horizontal_alignment = 1
+
+[node name="RecipesColumn" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=1405646602]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="RecipesLabel" type="Label" parent="Panel/HBoxContainer/RecipesColumn" unique_id=2127625321]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_oq4cf")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+horizontal_alignment = 1
+
+[node name="RecipesContainer" type="VBoxContainer" parent="Panel/HBoxContainer/RecipesColumn" unique_id=1791243739]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ContinueLabel" type="Label" parent="Panel" unique_id=745189525]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 15.0
+offset_top = 195.0
+offset_right = 345.0
+offset_bottom = 214.0
+theme = ExtResource("4_oq4cf")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+horizontal_alignment = 1
+vertical_alignment = 1

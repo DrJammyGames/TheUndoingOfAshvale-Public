@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://b1sl3l6pf0op6"]
+
+[ext_resource type="Texture2D" uid="uid://e4rxvoc6besi" path="res://Entities/Items/Sprites/Tools/sBasicAxe.png" id="1_8vm54"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="2_8vm54"]
+
+[resource]
+script = ExtResource("2_8vm54")
+item_id = "basic_axe"
+type = 4
+tool_category = 2
+icon_inv = ExtResource("1_8vm54")
+icon_world = ExtResource("1_8vm54")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

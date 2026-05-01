@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://jhd0kupcqmes"]
+
+[ext_resource type="Texture2D" uid="uid://dsuipr5upajed" path="res://UI/Sprites/sMenuBackground.png" id="1_27dx8"]
+[ext_resource type="Script" uid="uid://dytdvnpl572db" path="res://UI/Scripts/GlobalTooltip.gd" id="1_m8bre"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="2_esmne"]
+[ext_resource type="Theme" uid="uid://bm4rgr7o8i8eo" path="res://FX/Themes/TitleLabelTheme.tres" id="3_gv10h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gv10h"]
+texture = ExtResource("1_27dx8")
+texture_margin_left = 24.0
+texture_margin_top = 32.0
+texture_margin_right = 24.0
+texture_margin_bottom = 32.0
+
+[node name="GlobalTooltip" type="PanelContainer" unique_id=2067105931]
+z_index = 100
+offset_right = 208.0
+offset_bottom = 116.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gv10h")
+script = ExtResource("1_m8bre")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=164444879]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="ItemName" type="Label" parent="VBoxContainer" unique_id=1962417574]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_gv10h")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="ItemDesc" type="RichTextLabel" parent="VBoxContainer" unique_id=672669591]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme = ExtResource("2_esmne")
+theme_override_colors/default_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/shadow_outline_size = 1
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 2

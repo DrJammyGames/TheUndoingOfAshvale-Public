@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://dphc6x17q5pr5"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_exana"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_lnytl"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_r2hnb"]
+
+[sub_resource type="Resource" id="Resource_jp6qw"]
+script = ExtResource("1_exana")
+speaker_id = 2
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_swe2a"]
+script = ExtResource("1_exana")
+speaker_id = 2
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_51nff"]
+script = ExtResource("1_exana")
+speaker_id = 0
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_jq0vx"]
+script = ExtResource("1_exana")
+speaker_id = 2
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_r2hnb")
+dialogue_id = "blacksmith_requirements"
+npc_id = 1
+for_quest_id = "q_rebuild_blacksmith"
+quest_state = 1
+min_step_index = 0
+max_step_index = 3
+lines = Array[ExtResource("1_exana")]([SubResource("Resource_jp6qw"), SubResource("Resource_swe2a"), SubResource("Resource_51nff"), SubResource("Resource_jq0vx")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

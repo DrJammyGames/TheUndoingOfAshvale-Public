@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://chjaey4laymfm"]
+
+[ext_resource type="Shader" uid="uid://61ivfsg25c4x" path="res://FX/Shaders/DialogueBoxShader.gdshader" id="1_crtd7"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_crtd7")
+shader_parameter/progress = 0.0
+shader_parameter/edge_softness = 0.1
+shader_parameter/use_sprite_alpha = true

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ds0nn3fkfh4s4"]
+
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="1_7kwtm"]
+[ext_resource type="Script" uid="uid://br4eunokxgm65" path="res://UI/Scripts/Components/FurnitureSlot.gd" id="1_aqwlx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aqwlx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1hex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8wlh8"]
+
+[node name="FurnitureSlot" type="Button" unique_id=929408049]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aqwlx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d1hex")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8wlh8")
+flat = true
+expand_icon = true
+script = ExtResource("1_aqwlx")
+
+[node name="CountLabel" type="Label" parent="." unique_id=1254593829]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_7kwtm")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+horizontal_alignment = 2
+vertical_alignment = 2

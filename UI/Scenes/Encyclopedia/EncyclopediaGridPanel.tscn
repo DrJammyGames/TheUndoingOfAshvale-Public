@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://eejhp0pbxnj"]
+
+[ext_resource type="Script" uid="uid://dih8nciseplr3" path="res://UI/Scripts/Encyclopedia/EncyclopediaGridPanel.gd" id="1_qdrok"]
+
+[node name="EncyclopediaGridPanel" type="Control" unique_id=1900148956]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qdrok")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=169675192]
+custom_minimum_size = Vector2(290, 190)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=403787439]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 8

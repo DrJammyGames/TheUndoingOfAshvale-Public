@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="QuestDataResource" format=3 uid="uid://ubfddnwp0ugf"]
+
+[ext_resource type="Script" uid="uid://bopnb8lkb8atb" path="res://UI/Scripts/Quests/QuestDataResource.gd" id="1_b4cpq"]
+[ext_resource type="Script" uid="uid://dhvb73tym44qf" path="res://UI/Scripts/Quests/QuestStepsResource.gd" id="2_ik1pg"]
+[ext_resource type="Resource" uid="uid://bnc7vhmrxyo5q" path="res://UI/Resources/Quests/q_rebuild_blacksmith.tres" id="4_ooj8u"]
+
+[sub_resource type="Resource" id="Resource_3ce58"]
+script = ExtResource("2_ik1pg")
+condition_value = "witch"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_3gug5"]
+script = ExtResource("2_ik1pg")
+event_type = 1
+condition_key = 1
+condition_value = "wood"
+condition_amount = 5
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_p3c8f"]
+script = ExtResource("2_ik1pg")
+event_type = 1
+condition_key = 1
+condition_value = "stone"
+condition_amount = 5
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_vnaxb"]
+script = ExtResource("2_ik1pg")
+event_type = 1
+condition_key = 1
+condition_value = "green_slime_cube"
+condition_amount = 3
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_tbgxc"]
+script = ExtResource("2_ik1pg")
+event_type = 3
+condition_key = 1
+condition_value = "wood"
+condition_amount = 5
+consume_amount = 5
+condition_2_key = 0
+condition_2_value = "witch"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_71jlw"]
+script = ExtResource("2_ik1pg")
+event_type = 3
+condition_key = 1
+condition_value = "stone"
+condition_amount = 5
+consume_amount = 5
+condition_2_key = 0
+condition_2_value = "witch"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_4e3w8"]
+script = ExtResource("2_ik1pg")
+event_type = 3
+condition_key = 1
+condition_value = "green_slime_cube"
+condition_amount = 3
+consume_amount = 3
+condition_2_key = 0
+condition_2_value = "witch"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[resource]
+script = ExtResource("1_b4cpq")
+quest_id = "q_rebuild_alchemist"
+xp_reward = 75
+prereq_quests = Array[ExtResource("1_b4cpq")]([ExtResource("4_ooj8u")])
+steps = Array[ExtResource("2_ik1pg")]([SubResource("Resource_3ce58"), SubResource("Resource_3gug5"), SubResource("Resource_p3c8f"), SubResource("Resource_vnaxb"), SubResource("Resource_tbgxc"), SubResource("Resource_71jlw"), SubResource("Resource_4e3w8")])
+metadata/_custom_type_script = "uid://bopnb8lkb8atb"

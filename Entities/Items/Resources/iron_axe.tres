@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://6w4ymxbjdkmi"]
+
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_c4kmf"]
+[ext_resource type="Texture2D" uid="uid://bxkmtsc3sx0kb" path="res://Entities/Items/Sprites/Tools/sIronAxe.png" id="1_f6l4g"]
+
+[resource]
+script = ExtResource("1_c4kmf")
+item_id = "iron_axe"
+type = 4
+value = 50
+tool_category = 2
+base_power = 2
+time_cost = 1.75
+icon_inv = ExtResource("1_f6l4g")
+icon_world = ExtResource("1_f6l4g")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://yof7p4enc5lq"]
+
+[ext_resource type="Resource" uid="uid://bny7me68lmidk" path="res://Entities/Items/Resources/stone.tres" id="1_aoi3a"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_byxgp"]
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="2_2x1su"]
+[ext_resource type="Texture2D" uid="uid://epvwecu80lo0" path="res://UI/Sprites/EncyclopediaIcons/sMediumStoneEncyclopedia.png" id="2_r8ckr"]
+[ext_resource type="Texture2D" uid="uid://inqunhgj7mo1" path="res://Entities/Harvestables/Sprites/sDepositMediumStone1.png" id="4_r8ckr"]
+[ext_resource type="Texture2D" uid="uid://ci1dewduhux5o" path="res://Entities/Harvestables/Sprites/sDepositMediumStone2.png" id="5_mu5wd"]
+
+[resource]
+script = ExtResource("1_byxgp")
+harvest_id = "medium_stone_node"
+max_hits = 8
+drop_item = ExtResource("1_aoi3a")
+drop_amount_min = 3
+drop_amount_max = 6
+xp_reward = 8
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("4_r8ckr"), ExtResource("5_mu5wd")])
+encyclopedia_icon = ExtResource("2_r8ckr")
+hit_sfx = ExtResource("2_2x1su")
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

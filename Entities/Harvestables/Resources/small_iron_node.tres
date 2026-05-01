@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://bemrahqabcdbf"]
+
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_1u5mc"]
+[ext_resource type="Resource" uid="uid://cb6bj04mycpea" path="res://Entities/Items/Resources/iron.tres" id="1_l5ihs"]
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="1_lg6bo"]
+[ext_resource type="Texture2D" uid="uid://tgcf2njytk4i" path="res://UI/Sprites/EncyclopediaIcons/sSmallIronEncyclopedia.png" id="2_3fbd5"]
+[ext_resource type="Texture2D" uid="uid://dgo6p0sgsplqh" path="res://Entities/Harvestables/Sprites/sDepositSmallIron.png" id="3_l5ihs"]
+
+[resource]
+script = ExtResource("1_1u5mc")
+harvest_id = "small_iron_node"
+max_hits = 5
+drop_item = ExtResource("1_l5ihs")
+drop_amount_max = 3
+xp_reward = 7
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("3_l5ihs")])
+encyclopedia_icon = ExtResource("2_3fbd5")
+hit_sfx = ExtResource("1_lg6bo")
+node_size = 0
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

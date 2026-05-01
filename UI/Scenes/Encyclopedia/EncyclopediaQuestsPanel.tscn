@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://q78jp51qq07u"]
+
+[ext_resource type="Script" uid="uid://dihqolehdrih2" path="res://UI/Scripts/Encyclopedia/EncyclopediaQuestsPanel.gd" id="1_2jg7h"]
+[ext_resource type="PackedScene" uid="uid://kjow6wrsi7ca" path="res://UI/Scenes/Quests/QuestLogEntry.tscn" id="2_ipoyv"]
+
+[node name="EncyclopediaQuestsPanel" type="Control" unique_id=1088167543]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2jg7h")
+entry_scene = ExtResource("2_ipoyv")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=476531884]
+custom_minimum_size = Vector2(290, 190)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="QuestList" type="VBoxContainer" parent="ScrollContainer" unique_id=231286324]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(290, 0)
+layout_mode = 2
+size_flags_vertical = 3

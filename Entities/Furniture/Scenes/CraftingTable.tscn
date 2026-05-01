@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cxg2djarmahd0"]
+
+[ext_resource type="Script" uid="uid://cj1q7eftbgi2k" path="res://Entities/Interactables/Scripts/CraftingTable.gd" id="1_16eki"]
+[ext_resource type="Texture2D" uid="uid://bwueklcwdx171" path="res://Entities/Interactables/Sprites/sCraftingTable.png" id="2_fkmiw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v74ti"]
+size = Vector2(32, 27)
+
+[node name="CraftingTable" type="Area2D" unique_id=501988477]
+collision_layer = 4
+collision_mask = 2
+priority = 1
+script = ExtResource("1_16eki")
+prompt_text = "Craft"
+interact_priority = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1517952081]
+texture = ExtResource("2_fkmiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15313864]
+shape = SubResource("RectangleShape2D_v74ti")

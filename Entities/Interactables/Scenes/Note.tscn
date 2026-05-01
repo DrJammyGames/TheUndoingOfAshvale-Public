@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://seqlahn42bx3"]
+
+[ext_resource type="Script" uid="uid://so5i1t75dk5g" path="res://UI/Scripts/NoteMessage.gd" id="1_lc22b"]
+[ext_resource type="Texture2D" uid="uid://bpvx1p7gsuq8r" path="res://Entities/Interactables/Sprites/sNote.png" id="2_uk32r"]
+[ext_resource type="Texture2D" uid="uid://ci18iyxg4a8ol" path="res://UI/Sprites/sAlert.png" id="3_uk32r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlq5k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t7s7"]
+atlas = ExtResource("3_uk32r")
+region = Rect2(0, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1545g"]
+atlas = ExtResource("3_uk32r")
+region = Rect2(32, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsuqn"]
+atlas = ExtResource("3_uk32r")
+region = Rect2(64, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nhn2"]
+atlas = ExtResource("3_uk32r")
+region = Rect2(96, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge46k"]
+atlas = ExtResource("3_uk32r")
+region = Rect2(128, 0, 32, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkyew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t7s7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1545g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsuqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nhn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge46k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Note" type="Area2D" unique_id=1563232251]
+collision_layer = 4
+collision_mask = 2
+priority = 1
+script = ExtResource("1_lc22b")
+interact_priority = 1
+
+[node name="NoteSprite" type="Sprite2D" parent="." unique_id=751169248]
+unique_name_in_owner = true
+texture = ExtResource("2_uk32r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1093766654]
+shape = SubResource("RectangleShape2D_mlq5k")
+
+[node name="NotificationSprite" type="AnimatedSprite2D" parent="." unique_id=1384826779]
+unique_name_in_owner = true
+position = Vector2(0, -26)
+sprite_frames = SubResource("SpriteFrames_tkyew")
+frame_progress = 0.7431705

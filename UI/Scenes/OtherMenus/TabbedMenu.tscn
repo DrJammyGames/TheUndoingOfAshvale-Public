@@ -1,0 +1,741 @@
+[gd_scene format=3 uid="uid://d25m3qhlslhei"]
+
+[ext_resource type="Script" uid="uid://cmakpbb3h25m3" path="res://UI/Scripts/OtherMenus/TabbedMenu.gd" id="1_xx280"]
+[ext_resource type="StyleBox" uid="uid://bs1a0s2nh2us1" path="res://FX/Themes/TabTheme.tres" id="2_kjjsh"]
+[ext_resource type="Script" uid="uid://cg1xtuospd3cs" path="res://UI/Scripts/Components/TabButton.gd" id="3_2jp06"]
+[ext_resource type="Script" uid="uid://bs2dubcrqmvkp" path="res://UI/Scripts/Inventory/InventoryScreen.gd" id="3_2tf6e"]
+[ext_resource type="Texture2D" uid="uid://dtuxon74hs1py" path="res://UI/Sprites/sInventoryTabIcon.png" id="3_4ayl5"]
+[ext_resource type="Script" uid="uid://cfsv2joqpwwod" path="res://UI/Scripts/Components/HoverButton.gd" id="3_pbrqv"]
+[ext_resource type="Texture2D" uid="uid://dte2lo830q70h" path="res://UI/Sprites/sPlayerIcon.png" id="4_gwugf"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="4_kjjsh"]
+[ext_resource type="Texture2D" uid="uid://dxfx6xsecg341" path="res://UI/Sprites/sQuestTabIcon.png" id="4_pbrqv"]
+[ext_resource type="Texture2D" uid="uid://crk7hobw4u2va" path="res://UI/Sprites/sPauseTabIcon.png" id="5_rgasm"]
+[ext_resource type="Texture2D" uid="uid://c3uduhpptux8u" path="res://UI/Sprites/sEncylopediaIcon.png" id="6_4p7dv"]
+[ext_resource type="StyleBox" uid="uid://cvngassbhgv46" path="res://FX/Themes/MenusBackground.tres" id="7_mkjnj"]
+[ext_resource type="Script" uid="uid://dxhs7efqmookm" path="res://UI/Scripts/OtherMenus/PlayerScreen.gd" id="8_a4p7c"]
+[ext_resource type="Texture2D" uid="uid://dav6p0xp2jawm" path="res://UI/Sprites/sHealthBarBackground.png" id="10_4p7dv"]
+[ext_resource type="Script" uid="uid://banwk2bgnhsh8" path="res://UI/Scripts/Quests/QuestLogScreen.gd" id="10_rgasm"]
+[ext_resource type="PackedScene" uid="uid://kjow6wrsi7ca" path="res://UI/Scenes/Quests/QuestLogEntry.tscn" id="11_85mxp"]
+[ext_resource type="Texture2D" uid="uid://7c01to0fkw44" path="res://UI/Sprites/Slider01_Bar01.png" id="11_b0jqw"]
+[ext_resource type="Texture2D" uid="uid://dunamto67bd23" path="res://UI/Sprites/sPlayerScreenPortrait.png" id="12_7hnos"]
+[ext_resource type="StyleBox" uid="uid://dqke5y8beb8tk" path="res://FX/Themes/MainMenuButtonNormal.tres" id="12_h1pk3"]
+[ext_resource type="Script" uid="uid://b70asnw3us645" path="res://UI/Scripts/OtherMenus/PauseMenu.gd" id="12_mkjnj"]
+[ext_resource type="StyleBox" uid="uid://brigo1ejj34a5" path="res://FX/Themes/MainMenuButtonPressed.tres" id="13_mkjnj"]
+[ext_resource type="StyleBox" uid="uid://jfw088ie8ppi" path="res://FX/Themes/MainMenuButtonSelected.tres" id="14_dc1xt"]
+[ext_resource type="PackedScene" uid="uid://c7t8bxawvs6e7" path="res://UI/Scenes/Buttons/ArmorSlot.tscn" id="14_sl2lw"]
+[ext_resource type="Script" uid="uid://b3xoitpjao0aq" path="res://UI/Scripts/Encyclopedia/EncyclopediaScreen.gd" id="16_0ntho"]
+[ext_resource type="Texture2D" uid="uid://c6e10vfab4chq" path="res://UI/Sprites/sEnemyIcon.png" id="16_70yfw"]
+[ext_resource type="Texture2D" uid="uid://dsuipr5upajed" path="res://UI/Sprites/sMenuBackground.png" id="16_vnpul"]
+[ext_resource type="Texture2D" uid="uid://dlh6s5ooaskle" path="res://UI/Sprites/sQuestLogIcon.png" id="17_0ntho"]
+[ext_resource type="Texture2D" uid="uid://bd5tljqpfmy1q" path="res://UI/Sprites/sDialogueIcon.png" id="18_cal8g"]
+[ext_resource type="PackedScene" uid="uid://eejhp0pbxnj" path="res://UI/Scenes/Encyclopedia/EncyclopediaGridPanel.tscn" id="20_cal8g"]
+[ext_resource type="PackedScene" uid="uid://q78jp51qq07u" path="res://UI/Scenes/Encyclopedia/EncyclopediaQuestsPanel.tscn" id="21_chlvm"]
+[ext_resource type="Texture2D" uid="uid://bdq2pieiby6hb" path="res://UI/Sprites/sHarvestablesIcon.png" id="21_el1ob"]
+[ext_resource type="PackedScene" uid="uid://321kf4b0k40y" path="res://UI/Scenes/Encyclopedia/EncyclopediaDialoguePanel.tscn" id="22_31rp4"]
+[ext_resource type="Texture2D" uid="uid://bci4ibniuq6an" path="res://UI/Sprites/sItemsIcon.png" id="23_dql67"]
+[ext_resource type="Texture2D" uid="uid://ovkqx2qqkwav" path="res://UI/Sprites/sCraftingIcon.png" id="25_2oaco"]
+
+[node name="TabbedMenu" type="Control" unique_id=1659295331]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xx280")
+panel_root_path = NodePath("TabbedMenuRoot")
+open_duration = 0.25
+
+[node name="TabbedMenuRoot" type="Control" parent="." unique_id=818310224]
+custom_minimum_size = Vector2(380, 260)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabButtons" type="HBoxContainer" parent="TabbedMenuRoot" unique_id=222641980]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -174.0
+offset_top = 42.0
+offset_right = 174.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Player" type="Button" parent="TabbedMenuRoot/TabButtons" unique_id=866418715]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("2_kjjsh")
+theme_override_styles/pressed = ExtResource("2_kjjsh")
+theme_override_styles/hover = ExtResource("2_kjjsh")
+toggle_mode = true
+script = ExtResource("3_2jp06")
+tab_label_key = "tab_player"
+
+[node name="TextureRect" type="TextureRect" parent="TabbedMenuRoot/TabButtons/Player" unique_id=176076051]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 41.0
+offset_bottom = 43.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_gwugf")
+
+[node name="TabLabel" type="Label" parent="TabbedMenuRoot/TabButtons/Player" unique_id=1199298150]
+layout_mode = 0
+offset_left = 28.5
+offset_top = 1.0
+offset_right = 68.5
+offset_bottom = 30.5
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="Inventory" type="Button" parent="TabbedMenuRoot/TabButtons" unique_id=1194869934]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 23)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_kjjsh")
+theme_override_styles/pressed = ExtResource("2_kjjsh")
+theme_override_styles/hover = ExtResource("2_kjjsh")
+toggle_mode = true
+script = ExtResource("3_2jp06")
+tab_label_key = "tab_inventory"
+
+[node name="TextureRect" type="TextureRect" parent="TabbedMenuRoot/TabButtons/Inventory" unique_id=255733291]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 46.0
+offset_bottom = 46.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_4ayl5")
+
+[node name="TabLabel" type="Label" parent="TabbedMenuRoot/TabButtons/Inventory" unique_id=363963256]
+layout_mode = 0
+offset_left = 28.5
+offset_top = 1.0
+offset_right = 68.5
+offset_bottom = 30.5
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="Quests" type="Button" parent="TabbedMenuRoot/TabButtons" unique_id=854492538]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 23)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_kjjsh")
+theme_override_styles/pressed = ExtResource("2_kjjsh")
+theme_override_styles/hover = ExtResource("2_kjjsh")
+toggle_mode = true
+script = ExtResource("3_2jp06")
+tab_label_key = "tab_quests"
+
+[node name="TextureRect" type="TextureRect" parent="TabbedMenuRoot/TabButtons/Quests" unique_id=1991441487]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 46.0
+offset_bottom = 47.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_pbrqv")
+
+[node name="TabLabel" type="Label" parent="TabbedMenuRoot/TabButtons/Quests" unique_id=1604797887]
+layout_mode = 0
+offset_left = 28.5
+offset_top = 1.0
+offset_right = 68.5
+offset_bottom = 30.5
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="Encyclopedia" type="Button" parent="TabbedMenuRoot/TabButtons" unique_id=2147061532]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 23)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_kjjsh")
+theme_override_styles/pressed = ExtResource("2_kjjsh")
+theme_override_styles/hover = ExtResource("2_kjjsh")
+toggle_mode = true
+script = ExtResource("3_2jp06")
+tab_label_key = "tab_encyclopedia"
+
+[node name="TextureRect" type="TextureRect" parent="TabbedMenuRoot/TabButtons/Encyclopedia" unique_id=1886623192]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 46.0
+offset_bottom = 45.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_4p7dv")
+
+[node name="TabLabel" type="Label" parent="TabbedMenuRoot/TabButtons/Encyclopedia" unique_id=691744874]
+layout_mode = 0
+offset_left = 28.5
+offset_top = 1.0
+offset_right = 68.5
+offset_bottom = 30.5
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="Pause" type="Button" parent="TabbedMenuRoot/TabButtons" unique_id=620065554]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 23)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_kjjsh")
+theme_override_styles/pressed = ExtResource("2_kjjsh")
+theme_override_styles/hover = ExtResource("2_kjjsh")
+toggle_mode = true
+script = ExtResource("3_2jp06")
+tab_label_key = "tab_menu"
+
+[node name="TextureRect" type="TextureRect" parent="TabbedMenuRoot/TabButtons/Pause" unique_id=1963618140]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 46.0
+offset_bottom = 46.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_rgasm")
+
+[node name="TabLabel" type="Label" parent="TabbedMenuRoot/TabButtons/Pause" unique_id=1727685264]
+layout_mode = 0
+offset_left = 28.5
+offset_top = 1.0
+offset_right = 68.5
+offset_bottom = 30.5
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabbedMenuRoot" unique_id=1586890979]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -120.0
+offset_right = 190.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="TabbedMenuRoot/VBoxContainer" unique_id=1243878761]
+custom_minimum_size = Vector2(380, 240)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("7_mkjnj")
+
+[node name="PlayerTab" type="Control" parent="TabbedMenuRoot/VBoxContainer/Panel" unique_id=2019347593]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_a4p7c")
+portrait_texture = ExtResource("12_7hnos")
+
+[node name="BottomColumn" type="VBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab" unique_id=1795921448]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 126.0
+offset_right = 326.0
+offset_bottom = 196.0
+theme_override_constants/separation = -8
+
+[node name="LevelLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/BottomColumn" unique_id=1163830628]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "Level:"
+horizontal_alignment = 2
+
+[node name="XPBar" type="TextureProgressBar" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/BottomColumn" unique_id=547323267]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 48)
+layout_mode = 2
+nine_patch_stretch = true
+stretch_margin_left = 10
+stretch_margin_top = 4
+stretch_margin_right = 10
+stretch_margin_bottom = 4
+texture_under = ExtResource("10_4p7dv")
+texture_progress = ExtResource("11_b0jqw")
+
+[node name="XPLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/BottomColumn" unique_id=2106391634]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "XP/XP"
+horizontal_alignment = 2
+
+[node name="RightColumn" type="VBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab" unique_id=751827038]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 13.0
+offset_right = 406.0
+offset_bottom = 132.0
+theme_override_constants/separation = 0
+
+[node name="HPLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/RightColumn" unique_id=410030453]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "HP"
+
+[node name="AttackLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/RightColumn" unique_id=1642980939]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "ATK"
+
+[node name="DefenseLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/RightColumn" unique_id=1915113652]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "DEF"
+
+[node name="LuckLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/RightColumn" unique_id=1588348475]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "LCK"
+
+[node name="GoldLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/RightColumn" unique_id=788092655]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "GOLD"
+
+[node name="LeftColumn" type="HBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab" unique_id=1240309066]
+layout_mode = 0
+offset_left = -6.0
+offset_right = 198.0
+offset_bottom = 130.0
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn" unique_id=915822967]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="SlotHat" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn/VBoxContainer" unique_id=300271766 instance=ExtResource("14_sl2lw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SlotRingTop" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn/VBoxContainer" unique_id=244356646 instance=ExtResource("14_sl2lw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SlotRingBottom" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn/VBoxContainer" unique_id=1570596762 instance=ExtResource("14_sl2lw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn" unique_id=241696543]
+custom_minimum_size = Vector2(48, 100)
+layout_mode = 2
+texture = ExtResource("16_vnpul")
+
+[node name="PortraitRect" type="TextureRect" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn/Background" unique_id=2130253195]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -32.0
+offset_right = 24.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn" unique_id=991672450]
+layout_mode = 2
+alignment = 1
+
+[node name="SlotArmor" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn/VBoxContainer2" unique_id=1716641466 instance=ExtResource("14_sl2lw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SlotBoots" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn/VBoxContainer2" unique_id=563535255 instance=ExtResource("14_sl2lw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SlotWeapon" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab/LeftColumn/VBoxContainer2" unique_id=1438747033 instance=ExtResource("14_sl2lw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PlayerNameLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/PlayerTab" unique_id=34524439]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 57.0
+offset_top = -5.0
+offset_right = 136.0
+offset_bottom = 14.0
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventoryTab" type="Control" parent="TabbedMenuRoot/VBoxContainer/Panel" unique_id=1802010026]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = -32.0
+offset_bottom = -23.0
+script = ExtResource("3_2tf6e")
+
+[node name="HBox" type="HBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/InventoryTab" unique_id=544933551]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 2.0
+offset_right = 324.0
+offset_bottom = 173.0
+mouse_filter = 2
+
+[node name="ItemGrid" type="GridContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/InventoryTab/HBox" unique_id=296780769]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 8
+
+[node name="BottomFooter" type="Control" parent="TabbedMenuRoot/VBoxContainer/Panel/InventoryTab" unique_id=116553607]
+anchors_preset = 0
+offset_left = 152.0
+offset_top = 189.0
+offset_right = 152.0
+offset_bottom = 189.0
+mouse_filter = 2
+
+[node name="HintLabel" type="Label" parent="TabbedMenuRoot/VBoxContainer/Panel/InventoryTab/BottomFooter" unique_id=519714301]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.065
+anchor_right = 0.5
+anchor_bottom = 1.065
+offset_left = -158.0
+offset_top = -23.01001
+offset_right = 167.0
+offset_bottom = -5.01001
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/shadow_outline_size = 1
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 2
+
+[node name="DraggedIcon" type="TextureRect" parent="TabbedMenuRoot/VBoxContainer/Panel/InventoryTab" unique_id=1784473804]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+mouse_filter = 2
+stretch_mode = 2
+
+[node name="QuestTab" type="Control" parent="TabbedMenuRoot/VBoxContainer/Panel" unique_id=1348267565]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 350.0
+offset_bottom = 212.0
+script = ExtResource("10_rgasm")
+entry_scene = ExtResource("11_85mxp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/QuestTab" unique_id=42644054]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 0
+offset_left = -7.0
+offset_top = 5.0
+offset_right = 323.0
+offset_bottom = 189.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/QuestTab/VBoxContainer" unique_id=919154845]
+custom_minimum_size = Vector2(0, 184)
+layout_mode = 2
+
+[node name="QuestList" type="VBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/QuestTab/VBoxContainer/ScrollContainer" unique_id=950913809]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(310, 140)
+layout_mode = 2
+
+[node name="EncyclopediaTab" type="Control" parent="TabbedMenuRoot/VBoxContainer/Panel" unique_id=1382460113]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 23.0
+offset_top = 21.0
+offset_right = 357.0
+offset_bottom = 217.0
+script = ExtResource("16_0ntho")
+
+[node name="IconContainer" type="VBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab" unique_id=251734424]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 37.0
+offset_bottom = 207.0
+theme_override_constants/separation = -7
+
+[node name="HarvestablesButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/IconContainer" unique_id=1192446131]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("21_el1ob")
+flat = true
+script = ExtResource("3_pbrqv")
+
+[node name="ItemsButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/IconContainer" unique_id=1685600194]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("23_dql67")
+flat = true
+script = ExtResource("3_pbrqv")
+
+[node name="EnemiesButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/IconContainer" unique_id=521189068]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("16_70yfw")
+flat = true
+script = ExtResource("3_pbrqv")
+
+[node name="CraftingButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/IconContainer" unique_id=1772752985]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("25_2oaco")
+flat = true
+script = ExtResource("3_pbrqv")
+
+[node name="QuestsButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/IconContainer" unique_id=1171678667]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("17_0ntho")
+flat = true
+script = ExtResource("3_pbrqv")
+
+[node name="DialogueButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/IconContainer" unique_id=558513472]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("18_cal8g")
+flat = true
+script = ExtResource("3_pbrqv")
+
+[node name="ContentArea" type="Control" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab" unique_id=640216210]
+anchors_preset = 0
+offset_left = 37.0
+offset_top = 3.0
+offset_right = 335.0
+offset_bottom = 195.0
+
+[node name="HarvestablesPanel" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/ContentArea" unique_id=1900148956 instance=ExtResource("20_cal8g")]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(290, 190)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemsPanel" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/ContentArea" unique_id=2126249071 instance=ExtResource("20_cal8g")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnemiesPanel" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/ContentArea" unique_id=1429998203 instance=ExtResource("20_cal8g")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CraftingPanel" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/ContentArea" unique_id=576570031 instance=ExtResource("20_cal8g")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuestsPanel" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/ContentArea" unique_id=1088167543 instance=ExtResource("21_chlvm")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = -3.0
+
+[node name="DialoguePanel" parent="TabbedMenuRoot/VBoxContainer/Panel/EncyclopediaTab/ContentArea" unique_id=209651226 instance=ExtResource("22_31rp4")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="PauseTab" type="Control" parent="TabbedMenuRoot/VBoxContainer/Panel" unique_id=1602505237]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = 22.0
+offset_top = 22.0
+offset_right = 358.0
+offset_bottom = 218.0
+script = ExtResource("12_mkjnj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabbedMenuRoot/VBoxContainer/Panel/PauseTab" unique_id=690083987]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -68.0
+offset_right = 48.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/PauseTab/VBoxContainer" unique_id=492306979]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 32)
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("12_h1pk3")
+theme_override_styles/pressed = ExtResource("13_mkjnj")
+theme_override_styles/hover = ExtResource("14_dc1xt")
+script = ExtResource("3_pbrqv")
+
+[node name="SaveButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/PauseTab/VBoxContainer" unique_id=1757863141]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 32)
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("12_h1pk3")
+theme_override_styles/pressed = ExtResource("13_mkjnj")
+theme_override_styles/hover = ExtResource("14_dc1xt")
+script = ExtResource("3_pbrqv")
+
+[node name="OptionsButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/PauseTab/VBoxContainer" unique_id=712722547]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("12_h1pk3")
+theme_override_styles/pressed = ExtResource("13_mkjnj")
+theme_override_styles/hover = ExtResource("14_dc1xt")
+script = ExtResource("3_pbrqv")
+
+[node name="QuitButton" type="Button" parent="TabbedMenuRoot/VBoxContainer/Panel/PauseTab/VBoxContainer" unique_id=914636407]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("12_h1pk3")
+theme_override_styles/pressed = ExtResource("13_mkjnj")
+theme_override_styles/hover = ExtResource("14_dc1xt")
+script = ExtResource("3_pbrqv")
+
+[node name="DecorationModeButton" type="Button" parent="TabbedMenuRoot" unique_id=938326123]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 485.0
+offset_top = 314.0
+offset_right = 637.0
+offset_bottom = 357.0
+theme = ExtResource("4_kjjsh")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("12_h1pk3")
+theme_override_styles/pressed = ExtResource("13_mkjnj")
+theme_override_styles/hover = ExtResource("14_dc1xt")
+text = "Decoration Mode"
+script = ExtResource("3_pbrqv")

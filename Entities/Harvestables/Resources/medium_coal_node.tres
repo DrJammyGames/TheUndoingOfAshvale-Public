@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://dhwqkawwftt3o"]
+
+[ext_resource type="Resource" uid="uid://pmdu1fq4d6ot" path="res://Entities/Items/Resources/coal.tres" id="1_3a5yc"]
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="1_ox5dj"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_y7ywn"]
+[ext_resource type="Texture2D" uid="uid://dnguags2aj54l" path="res://UI/Sprites/EncyclopediaIcons/sMediumCoalEncyclopedia.png" id="2_ajjpb"]
+[ext_resource type="Texture2D" uid="uid://dvdaygn6qmk0" path="res://Entities/Harvestables/Sprites/sDepositMediumCoal.png" id="3_3a5yc"]
+
+[resource]
+script = ExtResource("1_y7ywn")
+harvest_id = "medium_coal_node"
+max_hits = 8
+drop_item = ExtResource("1_3a5yc")
+drop_amount_min = 3
+drop_amount_max = 6
+xp_reward = 8
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("3_3a5yc")])
+encyclopedia_icon = ExtResource("2_ajjpb")
+hit_sfx = ExtResource("1_ox5dj")
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

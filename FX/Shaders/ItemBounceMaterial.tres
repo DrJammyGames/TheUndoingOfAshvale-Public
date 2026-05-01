@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dhbxxl25wj0no"]
+
+[ext_resource type="Shader" uid="uid://6aqa31d0nqee" path="res://FX/Shaders/ItemBounce.gdshader" id="1_7gfd8"]
+
+[resource]
+shader = ExtResource("1_7gfd8")
+shader_parameter/bounce_height = 2.0
+shader_parameter/bounce_speed = 3.0
+shader_parameter/time_offset = 0.0
+shader_parameter/squash_amount = 0.1
+shader_parameter/tilt_amount = 0.1

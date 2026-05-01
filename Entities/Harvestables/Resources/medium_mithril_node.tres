@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://b1h83j0t6mscw"]
+
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_1dq1d"]
+[ext_resource type="Resource" uid="uid://b8xhb54niwfcx" path="res://Entities/Items/Resources/mithril.tres" id="1_4u5hs"]
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="1_xbc4i"]
+[ext_resource type="Texture2D" uid="uid://c3cpohjf3mn60" path="res://UI/Sprites/EncyclopediaIcons/sMediumMithrilEncyclopedia.png" id="2_ssnmd"]
+[ext_resource type="Texture2D" uid="uid://83d05ggr2mda" path="res://Entities/Harvestables/Sprites/sDepositMediumMithril.png" id="3_4u5hs"]
+
+[resource]
+script = ExtResource("1_1dq1d")
+harvest_id = "medium_mithril_node"
+max_hits = 8
+drop_item = ExtResource("1_4u5hs")
+drop_amount_min = 3
+drop_amount_max = 6
+xp_reward = 12
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("3_4u5hs")])
+encyclopedia_icon = ExtResource("2_ssnmd")
+hit_sfx = ExtResource("1_xbc4i")
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

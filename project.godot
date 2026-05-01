@@ -1,0 +1,171 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[addons]
+
+resources_spreadsheet_view/array_color_tint=100.0
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/resource_preview_size=32.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+resources_spreadsheet_view/fold_docks=true
+resources_spreadsheet_view/resource_cell_label_mode=1
+resources_spreadsheet_view/freeze_first_column=true
+
+[application]
+
+config/name="Thesis RPG"
+run/main_scene="uid://c6nxjtke42xsn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+
+[audio]
+
+buses/default_bus_layout="uid://yqkxmqjjjys2"
+
+[autoload]
+
+Analytics="*uid://bdwo82bl1hurp"
+SaveSystem="*uid://bafxafcoesc3e"
+Game="*uid://bn20xn5ljbdml"
+GameState="*uid://dosdqx1xktevs"
+DialogueData="*uid://dptb55gpv2loi"
+DialogueSystem="*uid://dthugdqsj62hq"
+InventorySystem="*uid://cidgra2ocrgbr"
+QuestSystem="*uid://g4ag3h5aoslr"
+Settings="*uid://b384puw4r43ly"
+UIRouter="*uid://yhfyuio3q7q0"
+ItemDatabase="*uid://ckcrsnixwdjsd"
+QuestDatabase="*uid://cr3ys3hxdh0di"
+HarvestableDatabase="*uid://dcr7ivyprlw15"
+NPCDatabase="*uid://dsm3w2nsml7lb"
+WorldFlags="*uid://cc1lml7yu7vxd"
+EnemyDatabase="*uid://e632bjc5c7gn"
+GlobalTooltip="*uid://jhd0kupcqmes"
+VisualFX="*uid://dmjarvmn5mnjo"
+TransitionScene="*uid://b2gnpx3qgtwdy"
+WorldDrops="*uid://bpe0vk0tx8qih"
+UIStringsDatabase="*uid://dd3lah2pew71o"
+AudioManager="*uid://eaa28k3ybxru"
+LevelSystem="*uid://o58voelx8lrj"
+RecipeDatabase="*uid://dq2rlx2x6bajm"
+DayNightSystem="*uid://dq4g2u30tmq64"
+CraftingSystem="*uid://cbigccrvx5t7j"
+DecorationSystem="*uid://brkmj4vesd73c"
+EncyclopediaSystem="*uid://d05yti5xao55i"
+ChestStorageSystem="*uid://dr46uox4n812s"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/mode=3
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+mouse_cursor/custom_image="uid://dhlxbdxltqyk7"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ludosense/plugin.cfg", "res://addons/project-time-tracker/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
+
+[global_group]
+
+night_modulate=""
+camera_bounds=""
+walk_through_transitions=""
+
+[input]
+
+move_up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+move_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+move_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+move_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+attack={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"location":0,"echo":false,"script":null)
+]
+}
+ui_inventory={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":73,"key_label":0,"unicode":105,"location":0,"echo":false,"script":null)
+]
+}
+ui_quest_log={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
+debug_add_quest={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+use_tool={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://DataFiles/LocalisationCSVs/DialogueText.en.translation", "res://DataFiles/LocalisationCSVs/HarvestableText.en.translation", "res://DataFiles/LocalisationCSVs/ItemText.en.translation", "res://DataFiles/LocalisationCSVs/QuestText.en.translation", "res://DataFiles/LocalisationCSVs/UIStringsText.en.translation", "res://DataFiles/LocalisationCSVs/Locations.en.translation", "res://DataFiles/LocalisationCSVs/Enemies.en.translation")
+locale/test="en"
+
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Interactable"
+2d_physics/layer_4="Pickup"
+2d_physics/layer_5="NPC"
+2d_physics/layer_6="Enemy"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[project_time_traker]
+
+sections/show_sections=true
+sections/show_graphs=true
+afk/afk_timer=300
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

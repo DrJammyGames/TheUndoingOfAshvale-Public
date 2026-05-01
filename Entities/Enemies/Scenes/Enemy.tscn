@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c8i0g02y7as3d"]
+
+[ext_resource type="Script" uid="uid://dypaycm828g2u" path="res://Entities/Enemies/Scripts/EnemySystems.gd" id="1_jf14c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2dwjk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jf14c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2dwjk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jf14c"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1425435420]
+collision_layer = 32
+collision_mask = 51
+script = ExtResource("1_jf14c")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1094175753]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_2dwjk")
+
+[node name="BodyCollider" type="CollisionShape2D" parent="." unique_id=1199281386]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_jf14c")
+
+[node name="AggroArea" type="Area2D" parent="." unique_id=329246168]
+unique_name_in_owner = true
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AggroArea" unique_id=1962295113]
+shape = SubResource("CircleShape2D_2dwjk")
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=766069672]
+unique_name_in_owner = true
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1646262702]
+shape = SubResource("CircleShape2D_jf14c")
+
+[node name="Timers" type="Node2D" parent="." unique_id=108137191]
+
+[node name="AttackCoolDownTimer" type="Timer" parent="Timers" unique_id=1671019391]
+unique_name_in_owner = true
+
+[node name="RepathTimer" type="Timer" parent="Timers" unique_id=1256570809]
+unique_name_in_owner = true

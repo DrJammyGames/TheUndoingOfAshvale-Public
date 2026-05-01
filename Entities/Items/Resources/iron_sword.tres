@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://b0ipxrx1iarrt"]
+
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_8ptn4"]
+[ext_resource type="Texture2D" uid="uid://w50klwmxphlm" path="res://Entities/Items/Sprites/Tools/sIronSword.png" id="1_vuk6t"]
+
+[resource]
+script = ExtResource("1_8ptn4")
+item_id = "iron_sword"
+type = 4
+tool_category = 1
+base_power = 3
+icon_inv = ExtResource("1_vuk6t")
+icon_world = ExtResource("1_vuk6t")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

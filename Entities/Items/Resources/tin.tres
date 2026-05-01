@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://covtlj1rlgj58"]
+
+[ext_resource type="Texture2D" uid="uid://uhcwblxrbj6p" path="res://Entities/Items/Sprites/InvIcons/sTinOreInv.png" id="1_rymuk"]
+[ext_resource type="Texture2D" uid="uid://d1f3c5cnridx6" path="res://Entities/Items/Sprites/Resources/sTinDrop.png" id="2_3j2a2"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="3_rymuk"]
+
+[resource]
+script = ExtResource("3_rymuk")
+item_id = "tin"
+type = 2
+icon_inv = ExtResource("1_rymuk")
+icon_world = ExtResource("2_3j2a2")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

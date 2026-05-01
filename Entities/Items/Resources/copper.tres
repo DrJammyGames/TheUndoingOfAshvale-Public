@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://cq4febmyki1x6"]
+
+[ext_resource type="Texture2D" uid="uid://ba00p1gsyfglv" path="res://Entities/Items/Sprites/InvIcons/sCopperOreInv.png" id="1_hlrt6"]
+[ext_resource type="Texture2D" uid="uid://dl5mea1w5aqsg" path="res://Entities/Items/Sprites/Resources/sCopperDrop.png" id="2_tumrq"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="3_hlrt6"]
+
+[resource]
+script = ExtResource("3_hlrt6")
+item_id = "copper"
+type = 2
+icon_inv = ExtResource("1_hlrt6")
+icon_world = ExtResource("2_tumrq")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

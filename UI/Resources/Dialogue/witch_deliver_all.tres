@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://bg62qecfmj8km"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_k8ta0"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_e4tf3"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_r0akh"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="3_ikyse"]
+[ext_resource type="Resource" uid="uid://ubfddnwp0ugf" path="res://UI/Resources/Quests/q_rebuild_alchemist.tres" id="4_toslv"]
+[ext_resource type="Resource" uid="uid://bny7me68lmidk" path="res://Entities/Items/Resources/stone.tres" id="5_asdva"]
+[ext_resource type="Resource" uid="uid://boftxyunuqnvu" path="res://Entities/Items/Resources/green_slime_cube.tres" id="6_8jsja"]
+
+[sub_resource type="Resource" id="Resource_3lo5q"]
+script = ExtResource("1_k8ta0")
+speaker_id = 3
+deliver_quest_id = ExtResource("4_toslv")
+deliver_item_id = ExtResource("3_ikyse")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_lgynv"]
+script = ExtResource("1_k8ta0")
+speaker_id = 3
+deliver_quest_id = ExtResource("4_toslv")
+deliver_item_id = ExtResource("5_asdva")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_eb6jm"]
+script = ExtResource("1_k8ta0")
+speaker_id = 3
+deliver_quest_id = ExtResource("4_toslv")
+deliver_item_id = ExtResource("6_8jsja")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_r0akh")
+dialogue_id = "witch_deliver_all"
+npc_id = 2
+for_quest_id = "q_rebuild_alchemist"
+quest_state = 2
+min_step_index = 4
+max_step_index = 6
+lines = Array[ExtResource("1_k8ta0")]([SubResource("Resource_3lo5q"), SubResource("Resource_lgynv"), SubResource("Resource_eb6jm")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

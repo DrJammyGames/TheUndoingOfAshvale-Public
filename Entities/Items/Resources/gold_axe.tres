@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://1r0rc55tskfq"]
+
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_4h3rq"]
+[ext_resource type="Texture2D" uid="uid://7tmscr1mdosx" path="res://Entities/Items/Sprites/Tools/sGoldAxe.png" id="1_ngdhu"]
+
+[resource]
+script = ExtResource("1_4h3rq")
+item_id = "gold_axe"
+type = 4
+value = 150
+tool_category = 2
+base_power = 5
+time_cost = 1.0
+icon_inv = ExtResource("1_ngdhu")
+icon_world = ExtResource("1_ngdhu")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

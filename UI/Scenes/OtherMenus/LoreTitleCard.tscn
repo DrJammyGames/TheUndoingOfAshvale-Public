@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://ckjt2ml6cxrap"]
+
+[ext_resource type="Script" uid="uid://ben1kg086oyh5" path="res://UI/Scripts/OtherMenus/LoreTitleCard.gd" id="1_pqovv"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="2_c8h6r"]
+[ext_resource type="Script" uid="uid://dvn1p3jrm2ki5" path="res://UI/Scripts/Components/TypeWriterText.gd" id="3_cyh2k"]
+
+[node name="LoreTitleCard" type="Control" unique_id=325732146]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pqovv")
+panel_root_path = NodePath("LoreTitleRoot")
+open_scale_start = 1.0
+open_duration = 0.4
+close_scale_end = 1.0
+close_duration = 0.2
+use_fade = true
+
+[node name="LoreTitleRoot" type="Control" parent="." unique_id=1199610116]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="LoreTitleRoot" unique_id=677237269]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.078431375, 0.0627451, 0.98039216)
+
+[node name="LoreDesc" type="RichTextLabel" parent="LoreTitleRoot/Background" unique_id=1390137379]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -120.0
+offset_right = 220.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_c8h6r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TypewriterText" type="Control" parent="LoreTitleRoot/Background" unique_id=1450949911]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_cyh2k")
+chars_per_second = 30.0
+target_label_path = NodePath("../LoreDesc")
+
+[node name="PressAnyKey" type="Label" parent="LoreTitleRoot/Background" unique_id=400930069]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -64.0
+offset_right = 320.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_c8h6r")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

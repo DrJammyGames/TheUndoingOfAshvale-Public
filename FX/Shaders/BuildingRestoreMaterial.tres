@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b0ktdrwwdmedg"]
+
+[ext_resource type="Shader" uid="uid://ckbj6ru8teq8b" path="res://FX/Shaders/BuildingRestoreSwipe.gdshader" id="1_jup26"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_jup26")
+shader_parameter/screen_center = Vector2(0, 0)
+shader_parameter/viewport_size = Vector2(1920, 1080)
+shader_parameter/progress = 0.0
+shader_parameter/max_radius = 160.0
+shader_parameter/softness = 16.0
+shader_parameter/alpha_mul = 1.0

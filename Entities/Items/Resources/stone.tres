@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://bny7me68lmidk"]
+
+[ext_resource type="Texture2D" uid="uid://dt60qr0y5gpgt" path="res://Entities/Items/Sprites/InvIcons/sStoneInv.png" id="1_2bvgv"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_kxk85"]
+[ext_resource type="Texture2D" uid="uid://clpl8bwgdqhr" path="res://Entities/Items/Sprites/Resources/sStoneDrop.png" id="2_hdj6t"]
+
+[resource]
+script = ExtResource("1_kxk85")
+item_id = "stone"
+type = 2
+icon_inv = ExtResource("1_2bvgv")
+icon_world = ExtResource("2_hdj6t")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

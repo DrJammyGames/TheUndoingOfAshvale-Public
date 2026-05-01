@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bp10845w1hu68"]
+
+[ext_resource type="Script" uid="uid://dxrae5u4ksuxr" path="res://UI/Scripts/OtherMenus/NewItemPopupMessage.gd" id="1_jktm7"]
+[ext_resource type="StyleBox" uid="uid://cvngassbhgv46" path="res://FX/Themes/MenusBackground.tres" id="2_hlt2p"]
+[ext_resource type="Script" uid="uid://dvn1p3jrm2ki5" path="res://UI/Scripts/Components/TypeWriterText.gd" id="3_b0ww0"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="3_hlt2p"]
+
+[node name="NewItemPopup" type="Control" unique_id=1690187443]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jktm7")
+
+[node name="Panel" type="Control" parent="." unique_id=1026024897]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PopupPanel" type="PanelContainer" parent="Panel" unique_id=1143886952]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_hlt2p")
+
+[node name="ItemText" type="RichTextLabel" parent="Panel/PopupPanel" unique_id=81334139]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_hlt2p")
+theme_override_colors/default_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="TypewriterText" type="Control" parent="Panel/PopupPanel" unique_id=1098797541]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("3_b0ww0")
+target_label_path = NodePath("../ItemText")
+tick_interval = 10000000
+
+[node name="ItemSprite" type="TextureRect" parent="Panel" unique_id=23861978]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = -24.0
+offset_top = 53.0
+offset_right = 8.0
+offset_bottom = 85.0
+scale = Vector2(1.5, 1.5)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://desnmk5hbrq6c"]
+
+[ext_resource type="Texture2D" uid="uid://fquoqg7l7y30" path="res://Entities/Items/Sprites/Tools/sSilverSword.png" id="1_8oqbw"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_74o7x"]
+
+[resource]
+script = ExtResource("1_74o7x")
+item_id = "silver_sword"
+type = 4
+value = 100
+tool_category = 1
+base_power = 5
+icon_inv = ExtResource("1_8oqbw")
+icon_world = ExtResource("1_8oqbw")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

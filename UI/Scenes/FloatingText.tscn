@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ba1wif75bb88c"]
+
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="1_qygeh"]
+[ext_resource type="Material" uid="uid://dj10uk1co77au" path="res://FX/Shaders/FloatingTextMaterial.tres" id="1_y8jlb"]
+[ext_resource type="Script" uid="uid://rqi3vvqfvaml" path="res://UI/Scripts/FloatingText.gd" id="2_5clbq"]
+
+[node name="FloatingText" type="Node2D" unique_id=1414445169]
+z_index = 2
+material = ExtResource("1_y8jlb")
+script = ExtResource("2_5clbq")
+
+[node name="Label" type="Label" parent="." unique_id=824479618]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qygeh")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/shadow_outline_size = 1
+horizontal_alignment = 1
+vertical_alignment = 1

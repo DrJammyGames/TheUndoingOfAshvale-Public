@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dtphb6ih4nxmv"]
+
+[ext_resource type="Texture2D" uid="uid://dbpmj5s7k78jl" path="res://UI/Sprites/Buttons/sButtonBlue.png" id="1_5th07"]
+[ext_resource type="Texture2D" uid="uid://dxijcigj0co7i" path="res://UI/Sprites/Buttons/sButtonBlueHighlighted.png" id="2_nfryn"]
+[ext_resource type="Script" uid="uid://cfsv2joqpwwod" path="res://UI/Scripts/Components/HoverButton.gd" id="3_nfryn"]
+[ext_resource type="Theme" uid="uid://bm4rgr7o8i8eo" path="res://FX/Themes/TitleLabelTheme.tres" id="3_vv1m5"]
+
+[node name="CloseButton" type="TextureButton" unique_id=1435577337]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 12.0
+offset_bottom = 22.0
+grow_horizontal = 0
+texture_normal = ExtResource("1_5th07")
+texture_pressed = ExtResource("2_nfryn")
+texture_hover = ExtResource("2_nfryn")
+texture_focused = ExtResource("2_nfryn")
+ignore_texture_size = true
+script = ExtResource("3_nfryn")
+
+[node name="CloseLabel" type="Label" parent="." unique_id=281376347]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 33.0
+offset_bottom = 31.0
+theme = ExtResource("3_vv1m5")
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1

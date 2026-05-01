@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://uwfdfjnxpt2i"]
+
+[ext_resource type="Script" uid="uid://cqr0cuhem5qoc" path="res://Entities/Furniture/Scripts/TownObjects.gd" id="1_ln2j3"]
+[ext_resource type="Texture2D" uid="uid://wxdf2nfioj8i" path="res://FX/Sprites/sFountain.png" id="1_slycv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln2j3"]
+atlas = ExtResource("1_slycv")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaskx"]
+atlas = ExtResource("1_slycv")
+region = Rect2(96, 0, 96, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rahgi"]
+atlas = ExtResource("1_slycv")
+region = Rect2(192, 0, 96, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvc7e"]
+atlas = ExtResource("1_slycv")
+region = Rect2(288, 0, 96, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl5l4"]
+atlas = ExtResource("1_slycv")
+region = Rect2(384, 0, 96, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ch1xu"]
+atlas = ExtResource("1_slycv")
+region = Rect2(480, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4nik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln2j3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaskx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rahgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvc7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl5l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ch1xu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uaskx"]
+size = Vector2(84, 79)
+
+[node name="TownFountain" type="Node2D" unique_id=208767031]
+script = ExtResource("1_ln2j3")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=2043291371]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_f4nik")
+animation = &"idle"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=541844323]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=585287299]
+position = Vector2(0, 14.5)
+shape = SubResource("RectangleShape2D_uaskx")

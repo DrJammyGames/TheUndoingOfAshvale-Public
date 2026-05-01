@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d2e82udfyckrb"]
+
+[ext_resource type="Script" uid="uid://buq7g6glhjirk" path="res://UI/Scripts/Crafting/CraftingIngredientSlot.gd" id="1_q8hq2"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="2_huq8n"]
+
+[node name="CraftingIngredientSlot" type="HBoxContainer" unique_id=2119263530]
+script = ExtResource("1_q8hq2")
+
+[node name="IngredientIcon" type="TextureRect" parent="." unique_id=559401078]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="AmountLabel" type="Label" parent="." unique_id=683441890]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_huq8n")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "x1"
+vertical_alignment = 1

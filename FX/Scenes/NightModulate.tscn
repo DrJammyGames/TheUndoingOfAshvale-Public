@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://blm62o3sis5id"]
+
+[node name="NightModulate" type="CanvasModulate" unique_id=55242025]
+color = Color(0.00688855, 1.8951484e-07, 0.102301545, 1)

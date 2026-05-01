@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://syao5av86v3y"]
+
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="1_7hmu1"]
+[ext_resource type="Resource" uid="uid://djpangrfmfxrv" path="res://Entities/Items/Resources/silver.tres" id="1_cp12q"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_ymtfj"]
+[ext_resource type="Texture2D" uid="uid://ngkl1m104yfl" path="res://UI/Sprites/EncyclopediaIcons/sSmallSilverEncyclopedia.png" id="2_clpmq"]
+[ext_resource type="Texture2D" uid="uid://c6hhia618uefh" path="res://Entities/Harvestables/Sprites/sDepositSmallSilver.png" id="3_cp12q"]
+
+[resource]
+script = ExtResource("1_ymtfj")
+harvest_id = "small_silver_node"
+max_hits = 5
+drop_item = ExtResource("1_cp12q")
+drop_amount_max = 3
+xp_reward = 9
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("3_cp12q")])
+encyclopedia_icon = ExtResource("2_clpmq")
+hit_sfx = ExtResource("1_7hmu1")
+node_size = 0
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

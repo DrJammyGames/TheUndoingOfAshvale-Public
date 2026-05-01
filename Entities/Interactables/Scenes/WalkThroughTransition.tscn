@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dm4rj0xnkl07q"]
+
+[ext_resource type="Script" uid="uid://dvmutv55w1x45" path="res://Entities/Interactables/Scripts/WalkThroughTransition.gd" id="1_j24ob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_istaq"]
+size = Vector2(20, 84)
+
+[node name="WalkThroughTransition" type="Area2D" unique_id=505157366]
+collision_layer = 4
+collision_mask = 2
+priority = 1
+script = ExtResource("1_j24ob")
+prompt_text = ""
+interact_priority = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=726871460]
+shape = SubResource("RectangleShape2D_istaq")

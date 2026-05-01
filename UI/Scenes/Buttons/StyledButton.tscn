@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ctd4l0lth70ed"]
+
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="1_auytr"]
+[ext_resource type="StyleBox" uid="uid://dqke5y8beb8tk" path="res://FX/Themes/MainMenuButtonNormal.tres" id="2_tprck"]
+[ext_resource type="StyleBox" uid="uid://brigo1ejj34a5" path="res://FX/Themes/MainMenuButtonPressed.tres" id="3_olyde"]
+[ext_resource type="StyleBox" uid="uid://jfw088ie8ppi" path="res://FX/Themes/MainMenuButtonSelected.tres" id="4_hshgn"]
+[ext_resource type="Script" uid="uid://cfsv2joqpwwod" path="res://UI/Scripts/Components/HoverButton.gd" id="5_3w32e"]
+
+[node name="StyledButton" type="Button" unique_id=89572225]
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_horizontal = 4
+theme = ExtResource("1_auytr")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 3
+theme_override_styles/normal = ExtResource("2_tprck")
+theme_override_styles/pressed = ExtResource("3_olyde")
+theme_override_styles/hover = ExtResource("4_hshgn")
+script = ExtResource("5_3w32e")

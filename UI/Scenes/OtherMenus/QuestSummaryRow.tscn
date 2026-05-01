@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ug0naqi6o4ew"]
+
+[ext_resource type="Script" uid="uid://cenere66gnvg6" path="res://UI/Scripts/OtherMenus/QuestSummaryRow.gd" id="1_po1cu"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="2_dw7vm"]
+
+[node name="QuestSummaryRow" type="HBoxContainer" unique_id=1622441775]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_po1cu")
+
+[node name="NameLabel" type="Label" parent="." unique_id=412151078]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_dw7vm")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/shadow_outline_size = 1
+vertical_alignment = 1

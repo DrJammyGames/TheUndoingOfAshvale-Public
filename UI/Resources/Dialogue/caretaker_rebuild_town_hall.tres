@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://bmfnhhfdxjts8"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_mffhm"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_d83cy"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_hdunr"]
+[ext_resource type="Resource" uid="uid://dc1kirwces8is" path="res://Entities/Items/Resources/basic_pickaxe.tres" id="3_dwdwf"]
+
+[sub_resource type="Resource" id="Resource_l1cht"]
+script = ExtResource("1_mffhm")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_ufi4h"]
+script = ExtResource("1_mffhm")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_if5od"]
+script = ExtResource("1_mffhm")
+speaker_id = 0
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_u0jjc"]
+script = ExtResource("1_mffhm")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_uth0h"]
+script = ExtResource("1_mffhm")
+give_item = ExtResource("3_dwdwf")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_tfj8k"]
+script = ExtResource("1_mffhm")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_jfj7c"]
+script = ExtResource("1_mffhm")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_bpmp2"]
+script = ExtResource("1_mffhm")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_hdunr")
+dialogue_id = "caretaker_rebuild_town_hall"
+for_quest_id = "q_rebuild_town_hall"
+quest_state = 3
+lines = Array[ExtResource("1_mffhm")]([SubResource("Resource_l1cht"), SubResource("Resource_ufi4h"), SubResource("Resource_if5od"), SubResource("Resource_u0jjc"), SubResource("Resource_uth0h"), SubResource("Resource_tfj8k"), SubResource("Resource_jfj7c"), SubResource("Resource_bpmp2")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

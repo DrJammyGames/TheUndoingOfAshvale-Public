@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://rlb4f62didtn"]
+
+[ext_resource type="AudioStream" uid="uid://cchwjlmrwr6b2" path="res://Sounds/SFX/sndChopWood.wav" id="1_cqrd0"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="1_hslbo"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_qd6h2"]
+[ext_resource type="Texture2D" uid="uid://cwpvfeiu2mo7u" path="res://UI/Sprites/EncyclopediaIcons/sSmallTreeEncyclopedia.png" id="2_bnxed"]
+[ext_resource type="Texture2D" uid="uid://bru727snkvyhh" path="res://Entities/Harvestables/Sprites/sTreeSmallSpring.png" id="3_hslbo"]
+
+[resource]
+script = ExtResource("1_qd6h2")
+harvest_id = "small_tree"
+max_hits = 5
+drop_item = ExtResource("1_hslbo")
+drop_amount_max = 3
+xp_reward = 5
+required_tool = 1
+world_sprites = Array[Texture2D]([ExtResource("3_hslbo")])
+encyclopedia_icon = ExtResource("2_bnxed")
+hit_sfx = ExtResource("1_cqrd0")
+node_size = 0
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

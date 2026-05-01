@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://d37gtphkacr2l"]
+
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_dh20e"]
+[ext_resource type="Texture2D" uid="uid://3yks3br3ohrr" path="res://Entities/Items/Sprites/InvIcons/sSilverIngotInv.png" id="1_hxvmw"]
+
+[resource]
+script = ExtResource("1_dh20e")
+item_id = "silver_ingot"
+type = 2
+value = 25
+icon_inv = ExtResource("1_hxvmw")
+icon_world = ExtResource("1_hxvmw")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://dj6f5hyffxp6g"]
+
+[ext_resource type="Script" uid="uid://dsnm0dq4dy11u" path="res://UI/Scripts/Options/OptionsMenu.gd" id="1_xihfp"]
+[ext_resource type="StyleBox" uid="uid://cvngassbhgv46" path="res://FX/Themes/MenusBackground.tres" id="2_cq607"]
+[ext_resource type="StyleBox" uid="uid://dr4gcmovkqilj" path="res://FX/Themes/TabBar.tres" id="2_sdaph"]
+[ext_resource type="Script" uid="uid://cg1xtuospd3cs" path="res://UI/Scripts/Components/TabButton.gd" id="3_75cnd"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="4_61u06"]
+[ext_resource type="Texture2D" uid="uid://cl0o0132bbmit" path="res://UI/Sprites/sAudioTab.png" id="4_iir22"]
+[ext_resource type="Texture2D" uid="uid://x3pppnt0qxqw" path="res://UI/Sprites/sGameplayTab.png" id="7_lga5a"]
+[ext_resource type="Texture2D" uid="uid://gl7n7lbvo5ib" path="res://UI/Sprites/sAccessibilityTab.png" id="8_8d58i"]
+[ext_resource type="PackedScene" uid="uid://ctd4l0lth70ed" path="res://UI/Scenes/Buttons/StyledButton.tscn" id="10_iir22"]
+
+[node name="OptionsMenu" type="Control" unique_id=617895754]
+custom_minimum_size = Vector2(380, 180)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xihfp")
+panel_root_path = NodePath("OptionsRoot")
+
+[node name="OptionsRoot" type="Control" parent="." unique_id=1573005479]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabBar" type="HBoxContainer" parent="OptionsRoot" unique_id=1911180279]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -174.0
+offset_top = -124.0
+offset_right = 174.0
+offset_bottom = -92.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="AudioTabButton" type="Button" parent="OptionsRoot/TabBar" unique_id=380405464]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("2_sdaph")
+theme_override_styles/pressed = ExtResource("2_sdaph")
+theme_override_styles/hover = ExtResource("2_sdaph")
+toggle_mode = true
+script = ExtResource("3_75cnd")
+tab_label_key = "audio_tab"
+
+[node name="TextureRect" type="TextureRect" parent="OptionsRoot/TabBar/AudioTabButton" unique_id=10611143]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 23.0
+offset_bottom = 24.0
+texture = ExtResource("4_iir22")
+
+[node name="TabLabel" type="Label" parent="OptionsRoot/TabBar/AudioTabButton" unique_id=942866744]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 52.0
+offset_bottom = 31.0
+theme = ExtResource("4_61u06")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="GameplayTabButton" type="Button" parent="OptionsRoot/TabBar" unique_id=382507674]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 28)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("2_sdaph")
+theme_override_styles/pressed = ExtResource("2_sdaph")
+theme_override_styles/hover = ExtResource("2_sdaph")
+toggle_mode = true
+script = ExtResource("3_75cnd")
+tab_label_key = "gameplay_tab"
+
+[node name="TextureRect" type="TextureRect" parent="OptionsRoot/TabBar/GameplayTabButton" unique_id=1081610105]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("7_lga5a")
+
+[node name="TabLabel" type="Label" parent="OptionsRoot/TabBar/GameplayTabButton" unique_id=472044041]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 52.0
+offset_bottom = 31.0
+theme = ExtResource("4_61u06")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="AccessibilityTabButton" type="Button" parent="OptionsRoot/TabBar" unique_id=1106893748]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 28)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("2_sdaph")
+theme_override_styles/pressed = ExtResource("2_sdaph")
+theme_override_styles/hover = ExtResource("2_sdaph")
+toggle_mode = true
+script = ExtResource("3_75cnd")
+tab_label_key = "accessibility_tab"
+
+[node name="TextureRect" type="TextureRect" parent="OptionsRoot/TabBar/AccessibilityTabButton" unique_id=1840159687]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("8_8d58i")
+
+[node name="TabLabel" type="Label" parent="OptionsRoot/TabBar/AccessibilityTabButton" unique_id=802411529]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 52.0
+offset_bottom = 31.0
+theme = ExtResource("4_61u06")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="OptionsPanel" type="Panel" parent="OptionsRoot" unique_id=601046677]
+custom_minimum_size = Vector2(380, 250)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -120.0
+offset_right = 190.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_cq607")
+
+[node name="MainVBox" type="VBoxContainer" parent="OptionsRoot/OptionsPanel" unique_id=1736659903]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -95.0
+offset_right = 164.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="TabContent" type="Control" parent="OptionsRoot/OptionsPanel/MainVBox" unique_id=1735147990]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AudioPanel" type="VBoxContainer" parent="OptionsRoot/OptionsPanel/MainVBox/TabContent" unique_id=576944363]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioResetButton" parent="OptionsRoot/OptionsPanel/MainVBox/TabContent/AudioPanel" unique_id=89572225 instance=ExtResource("10_iir22")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reset to Defaults"
+
+[node name="GameplayPanel" type="VBoxContainer" parent="OptionsRoot/OptionsPanel/MainVBox/TabContent" unique_id=1654515458]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameplayResetButton" parent="OptionsRoot/OptionsPanel/MainVBox/TabContent/GameplayPanel" unique_id=1710878391 instance=ExtResource("10_iir22")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reset to Defaults"
+
+[node name="AccessibilityPanel" type="VBoxContainer" parent="OptionsRoot/OptionsPanel/MainVBox/TabContent" unique_id=1580049541]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="AccessibilityResetButton" parent="OptionsRoot/OptionsPanel/MainVBox/TabContent/AccessibilityPanel" unique_id=740676090 instance=ExtResource("10_iir22")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reset to Defaults"

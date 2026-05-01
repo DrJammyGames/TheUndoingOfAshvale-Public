@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="RecipeDataResource" format=3 uid="uid://dv31cmprqdkde"]
+
+[ext_resource type="Script" uid="uid://c76cib2uqwufp" path="res://UI/Scripts/Crafting/RecipeIngredientData.gd" id="1_r0b1x"]
+[ext_resource type="Resource" uid="uid://5i0mcr3d64dq" path="res://Entities/Items/Resources/gold_ingot.tres" id="2_r0b1x"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="3_bnkcc"]
+[ext_resource type="Resource" uid="uid://1r0rc55tskfq" path="res://Entities/Items/Resources/gold_axe.tres" id="4_s33ht"]
+[ext_resource type="Script" uid="uid://bkfkn6ullfvu2" path="res://UI/Scripts/Crafting/RecipeDataResource.gd" id="5_4g07c"]
+
+[sub_resource type="Resource" id="Resource_n7efc"]
+script = ExtResource("1_r0b1x")
+item = ExtResource("2_r0b1x")
+amount = 2
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[sub_resource type="Resource" id="Resource_tgoix"]
+script = ExtResource("1_r0b1x")
+item = ExtResource("3_bnkcc")
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[resource]
+script = ExtResource("5_4g07c")
+recipe_id = "craft_gold_axe"
+recipe_type = 1
+result_item = ExtResource("4_s33ht")
+ingredients = Array[ExtResource("1_r0b1x")]([SubResource("Resource_n7efc"), SubResource("Resource_tgoix")])
+unlock_source = 1
+xp_reward = 30
+time_cost_ticks = 2.0
+required_level = 10
+metadata/_custom_type_script = "uid://bkfkn6ullfvu2"

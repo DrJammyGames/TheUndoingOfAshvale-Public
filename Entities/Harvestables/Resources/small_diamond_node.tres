@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://cw1di6x1ba804"]
+
+[ext_resource type="Resource" uid="uid://jus1bxdvmuhu" path="res://Entities/Items/Resources/diamond.tres" id="1_2lm48"]
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="1_5morx"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_qyw85"]
+[ext_resource type="Texture2D" uid="uid://cge864qvwr7td" path="res://UI/Sprites/EncyclopediaIcons/sSmallDiamondEncyclopedia.png" id="2_45djv"]
+[ext_resource type="Texture2D" uid="uid://cvw710jto8hg" path="res://Entities/Harvestables/Sprites/sDepositSmallDiamond.png" id="3_2lm48"]
+
+[resource]
+script = ExtResource("1_qyw85")
+harvest_id = "small_diamond_node"
+max_hits = 5
+drop_item = ExtResource("1_2lm48")
+drop_amount_max = 3
+xp_reward = 12
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("3_2lm48")])
+encyclopedia_icon = ExtResource("2_45djv")
+hit_sfx = ExtResource("1_5morx")
+node_size = 0
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

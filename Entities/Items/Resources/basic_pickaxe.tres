@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://dc1kirwces8is"]
+
+[ext_resource type="Texture2D" uid="uid://bfjx7kc1mmdtj" path="res://Entities/Items/Sprites/Tools/sBasicPickaxe.png" id="1_bvqvw"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="2_bvqvw"]
+
+[resource]
+script = ExtResource("2_bvqvw")
+item_id = "basic_pickaxe"
+type = 4
+tool_category = 4
+icon_inv = ExtResource("1_bvqvw")
+icon_world = ExtResource("1_bvqvw")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

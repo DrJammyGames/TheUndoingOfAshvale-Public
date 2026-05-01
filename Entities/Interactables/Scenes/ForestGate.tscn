@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://diwu7k0akmy3c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjurm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6nec"]
+
+[node name="ForestGate" type="Node2D" unique_id=674031688]
+
+[node name="BarrierVisual" type="Sprite2D" parent="." unique_id=1717144509]
+
+[node name="BarrierCollider" type="StaticBody2D" parent="." unique_id=1101603445]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarrierCollider" unique_id=811865811]
+shape = SubResource("RectangleShape2D_jjurm")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1604255045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=932192180]
+shape = SubResource("RectangleShape2D_f6nec")
+
+[node name="FX" type="Node2D" parent="." unique_id=929947763]

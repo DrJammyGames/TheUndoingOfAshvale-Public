@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://wccp6w2oi4o5"]
+
+[ext_resource type="Script" uid="uid://cqr0cuhem5qoc" path="res://Entities/Furniture/Scripts/TownObjects.gd" id="1_iuyhw"]
+[ext_resource type="Texture2D" uid="uid://dx01w5bg7fd6m" path="res://Entities/Interactables/Sprites/sLamp.png" id="1_va3gc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iuyhw"]
+size = Vector2(11, 61)
+
+[sub_resource type="Gradient" id="Gradient_va3gc"]
+offsets = PackedFloat32Array(0, 0.36153847, 0.7215385)
+colors = PackedColorArray(1, 1, 1, 0.8039216, 0.52156866, 0.52156866, 0.52156866, 0.69411767, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iuyhw"]
+gradient = SubResource("Gradient_va3gc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="LampPost" type="StaticBody2D" unique_id=1665183570]
+collision_mask = 0
+script = ExtResource("1_iuyhw")
+can_be_moved = true
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=793537411]
+texture = ExtResource("1_va3gc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2147340997]
+position = Vector2(-14.5, -1.5)
+shape = SubResource("RectangleShape2D_iuyhw")
+
+[node name="LampLight" type="PointLight2D" parent="." unique_id=807924342]
+light_mask = 3
+position = Vector2(6.999995, -2.5000038)
+scale = Vector2(1.3437501, 1.046875)
+color = Color(1, 0.8235294, 0.54901963, 1)
+energy = 0.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_iuyhw")

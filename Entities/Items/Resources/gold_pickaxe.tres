@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://cwue8f6omyxwu"]
+
+[ext_resource type="Texture2D" uid="uid://b2tnlglrh7klk" path="res://Entities/Items/Sprites/Tools/sGoldPickaxe.png" id="1_ifwe8"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_pfavs"]
+
+[resource]
+script = ExtResource("1_pfavs")
+item_id = "gold_pickaxe"
+type = 4
+value = 150
+tool_category = 4
+base_power = 5
+time_cost = 1.0
+icon_inv = ExtResource("1_ifwe8")
+icon_world = ExtResource("1_ifwe8")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

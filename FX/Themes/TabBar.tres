@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://dr4gcmovkqilj"]
+
+[ext_resource type="Texture2D" uid="uid://c67ivwsk1xclf" path="res://UI/Sprites/sBlankTab.png" id="1_6a6s2"]
+
+[resource]
+texture = ExtResource("1_6a6s2")
+texture_margin_left = 10.0
+texture_margin_top = 8.0
+texture_margin_right = 10.0
+texture_margin_bottom = 8.0

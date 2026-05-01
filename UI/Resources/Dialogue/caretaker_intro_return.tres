@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://bcxtpgotvbflr"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_62o5r"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_3j737"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_q3t2p"]
+[ext_resource type="Resource" uid="uid://b1sl3l6pf0op6" path="res://Entities/Items/Resources/basic_axe.tres" id="3_q3t2p"]
+
+[sub_resource type="Resource" id="Resource_ibvqc"]
+script = ExtResource("1_62o5r")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_071t5"]
+script = ExtResource("1_62o5r")
+speaker_id = 0
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_2w36c"]
+script = ExtResource("1_62o5r")
+give_item = ExtResource("3_q3t2p")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_vv8bc"]
+script = ExtResource("1_62o5r")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_b3ff2"]
+script = ExtResource("1_62o5r")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_3j737")
+dialogue_id = "caretaker_intro_return"
+for_quest_id = "q_intro"
+quest_state = 2
+min_step_index = 3
+max_step_index = 3
+lines = Array[ExtResource("1_62o5r")]([SubResource("Resource_ibvqc"), SubResource("Resource_071t5"), SubResource("Resource_2w36c"), SubResource("Resource_vv8bc"), SubResource("Resource_b3ff2")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

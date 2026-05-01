@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dm2edjdwriv3a"]
+
+[ext_resource type="Script" uid="uid://cp54in0fp4kgp" path="res://Entities/Interactables/Scripts/Bed.gd" id="1_iji1c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7li5k"]
+
+[node name="Bed" type="Area2D" unique_id=1722163969]
+collision_layer = 4
+collision_mask = 2
+priority = 1
+script = ExtResource("1_iji1c")
+interact_priority = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2134988881]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1110049834]
+shape = SubResource("RectangleShape2D_7li5k")

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://nsw4w52edrx5"]
+
+[ext_resource type="Script" uid="uid://dfies10asmomg" path="res://UI/Scripts/Components/InteractionPrompt.gd" id="1_bnr7x"]
+[ext_resource type="Texture2D" uid="uid://dsuipr5upajed" path="res://UI/Sprites/sMenuBackground.png" id="2_bnr7x"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="3_qegt2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w4tpd"]
+resource_local_to_scene = true
+texture = ExtResource("2_bnr7x")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+modulate_color = Color(1, 1, 1, 0.78431374)
+
+[node name="InteractionPrompt" type="Control" unique_id=1558620796]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+size_flags_horizontal = 3
+script = ExtResource("1_bnr7x")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1039434054]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_right = 68.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w4tpd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=370897906]
+layout_mode = 2
+theme = ExtResource("3_qegt2")
+
+[node name="KeyLabel" type="Label" parent="Panel/HBoxContainer" unique_id=578502946]
+unique_name_in_owner = true
+layout_mode = 2
+text = "[E]"
+vertical_alignment = 1
+
+[node name="ActionLabel" type="Label" parent="Panel/HBoxContainer" unique_id=904414998]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Interact"
+vertical_alignment = 1

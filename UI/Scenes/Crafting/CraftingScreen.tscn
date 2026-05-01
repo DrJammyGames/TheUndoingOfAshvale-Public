@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://ds2hvj22y6u1q"]
+
+[ext_resource type="Script" uid="uid://f7evxpya2tsc" path="res://UI/Scripts/Crafting/CraftingScreen.gd" id="1_wxpue"]
+[ext_resource type="StyleBox" uid="uid://cvngassbhgv46" path="res://FX/Themes/MenusBackground.tres" id="2_8sy86"]
+[ext_resource type="StyleBox" uid="uid://bs1a0s2nh2us1" path="res://FX/Themes/TabTheme.tres" id="2_w3rfv"]
+[ext_resource type="Script" uid="uid://cg1xtuospd3cs" path="res://UI/Scripts/Components/TabButton.gd" id="3_0tpq4"]
+[ext_resource type="Texture2D" uid="uid://q78031bi4mrl" path="res://Entities/Items/Sprites/InvIcons/sCopperIngotInv.png" id="4_0qf7l"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="4_8e2bs"]
+[ext_resource type="PackedScene" uid="uid://dg3tsn8udwkgs" path="res://UI/Scenes/Crafting/CraftingDetailPanel.tscn" id="6_0tpq4"]
+[ext_resource type="Texture2D" uid="uid://ovkqx2qqkwav" path="res://UI/Sprites/sCraftingIcon.png" id="6_tlkdx"]
+[ext_resource type="Texture2D" uid="uid://dn5bnyn5uet82" path="res://Entities/Furniture/Sprites/sSmallChest.png" id="7_nbba4"]
+
+[node name="CraftingScreen" type="Control" unique_id=363697601]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wxpue")
+panel_root_path = NodePath("CraftingRoot")
+
+[node name="CraftingRoot" type="Control" parent="." unique_id=1268434409]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabBar" type="HBoxContainer" parent="CraftingRoot" unique_id=706623579]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -163.0
+offset_top = 52.0
+offset_right = 164.0
+offset_bottom = 84.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="SmeltTabButton" type="Button" parent="CraftingRoot/TabBar" unique_id=400894281]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("2_w3rfv")
+theme_override_styles/pressed = ExtResource("2_w3rfv")
+theme_override_styles/hover = ExtResource("2_w3rfv")
+toggle_mode = true
+script = ExtResource("3_0tpq4")
+tab_label_key = "tab_smelt"
+
+[node name="TextureRect" type="TextureRect" parent="CraftingRoot/TabBar/SmeltTabButton" unique_id=1844553725]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_0qf7l")
+
+[node name="TabLabel" type="Label" parent="CraftingRoot/TabBar/SmeltTabButton" unique_id=1663577835]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 48.0
+offset_bottom = 27.0
+theme = ExtResource("4_8e2bs")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="CraftTabButton" type="Button" parent="CraftingRoot/TabBar" unique_id=308771185]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("2_w3rfv")
+theme_override_styles/pressed = ExtResource("2_w3rfv")
+theme_override_styles/hover = ExtResource("2_w3rfv")
+toggle_mode = true
+script = ExtResource("3_0tpq4")
+tab_label_key = "tab_craft"
+
+[node name="TextureRect" type="TextureRect" parent="CraftingRoot/TabBar/CraftTabButton" unique_id=1256722596]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_tlkdx")
+
+[node name="TabLabel" type="Label" parent="CraftingRoot/TabBar/CraftTabButton" unique_id=257807088]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 48.0
+offset_bottom = 27.0
+theme = ExtResource("4_8e2bs")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="FurnitureTabButton" type="Button" parent="CraftingRoot/TabBar" unique_id=882784636]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("2_w3rfv")
+theme_override_styles/pressed = ExtResource("2_w3rfv")
+theme_override_styles/hover = ExtResource("2_w3rfv")
+toggle_mode = true
+script = ExtResource("3_0tpq4")
+tab_label_key = "tab_furniture"
+
+[node name="TextureRect" type="TextureRect" parent="CraftingRoot/TabBar/FurnitureTabButton" unique_id=2146729650]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 39.0
+offset_bottom = 39.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_nbba4")
+
+[node name="TabLabel" type="Label" parent="CraftingRoot/TabBar/FurnitureTabButton" unique_id=774947481]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 48.0
+offset_bottom = 27.0
+theme = ExtResource("4_8e2bs")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="CraftingRoot" unique_id=1604536776]
+custom_minimum_size = Vector2(360, 240)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -90.0
+offset_right = 170.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_8sy86")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CraftingRoot/Panel" unique_id=1362113052]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -101.0
+offset_right = 157.0
+offset_bottom = 97.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CraftingRoot/Panel/VBoxContainer" unique_id=1226711330]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="RecipeGrid" type="GridContainer" parent="CraftingRoot/Panel/VBoxContainer/MarginContainer" unique_id=1602250545]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+columns = 8
+
+[node name="DetailPanel" parent="CraftingRoot/Panel/VBoxContainer/MarginContainer" unique_id=1973479111 instance=ExtResource("6_0tpq4")]
+unique_name_in_owner = true
+layout_mode = 2

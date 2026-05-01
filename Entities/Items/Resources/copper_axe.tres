@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://3qywxdrkjqs8"]
+
+[ext_resource type="Texture2D" uid="uid://bhwsv2b7b128e" path="res://Entities/Items/Sprites/Tools/sCopperAxe.png" id="1_8int5"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_p3rmq"]
+
+[resource]
+script = ExtResource("1_p3rmq")
+item_id = "copper_axe"
+type = 4
+value = 75
+tool_category = 2
+base_power = 3
+time_cost = 1.5
+icon_inv = ExtResource("1_8int5")
+icon_world = ExtResource("1_8int5")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

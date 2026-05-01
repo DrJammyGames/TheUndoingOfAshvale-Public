@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://bmxc8cx0diw1g"]
+
+[ext_resource type="Resource" uid="uid://d2es3x728kbso" path="res://Entities/Items/Resources/herb.tres" id="1_jradj"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_vuc3p"]
+[ext_resource type="Texture2D" uid="uid://iq1kvnphq0oj" path="res://UI/Sprites/EncyclopediaIcons/sGrassEncyclopedia.png" id="2_317sd"]
+[ext_resource type="Texture2D" uid="uid://dbou55wdvovik" path="res://Entities/Harvestables/Sprites/sGrassFull.png" id="2_p4l5y"]
+
+[resource]
+script = ExtResource("1_vuc3p")
+harvest_id = "grass"
+drop_item = ExtResource("1_jradj")
+drop_amount_min = 2
+drop_amount_max = 4
+xp_reward = 2
+required_tool = 4
+world_sprites = Array[Texture2D]([ExtResource("2_p4l5y")])
+encyclopedia_icon = ExtResource("2_317sd")
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

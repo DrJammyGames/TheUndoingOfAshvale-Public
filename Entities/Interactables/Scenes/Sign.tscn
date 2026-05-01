@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://deblm2dxh38ci"]
+
+[ext_resource type="Script" uid="uid://cvte4etn1nqxr" path="res://Entities/Interactables/Scripts/Sign.gd" id="1_lnhvf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlq5k"]
+
+[node name="Sign" type="Area2D" unique_id=1563232251]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_lnhvf")
+
+[node name="SignSprite" type="Sprite2D" parent="." unique_id=751169248]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1093766654]
+shape = SubResource("RectangleShape2D_mlq5k")

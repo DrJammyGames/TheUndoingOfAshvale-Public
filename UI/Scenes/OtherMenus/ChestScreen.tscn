@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://rmse2raa7m3j"]
+
+[ext_resource type="Script" uid="uid://bjyar73f6c7kk" path="res://UI/Scripts/OtherMenus/ChestScreen.gd" id="1_5hxbm"]
+[ext_resource type="PackedScene" uid="uid://msp24fwft8c0" path="res://UI/Scenes/Inventory/ItemSlot.tscn" id="2_82oqn"]
+[ext_resource type="StyleBox" uid="uid://cvngassbhgv46" path="res://FX/Themes/MenusBackground.tres" id="2_q4ois"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="3_82oqn"]
+
+[node name="ChestScreen" type="Control" unique_id=577402939]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5hxbm")
+item_slot_scene = ExtResource("2_82oqn")
+panel_root_path = NodePath("ChestRoot")
+
+[node name="ChestRoot" type="Control" parent="." unique_id=1527086852]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="ChestRoot" unique_id=293398763]
+custom_minimum_size = Vector2(380, 280)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -120.0
+offset_right = 170.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_q4ois")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChestRoot/PanelContainer" unique_id=255921136]
+layout_mode = 2
+
+[node name="ChestLabel" type="Label" parent="ChestRoot/PanelContainer/VBoxContainer" unique_id=1584166132]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_82oqn")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "Chest"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ChestRoot/PanelContainer/VBoxContainer" unique_id=1840015653]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChestGrid" type="GridContainer" parent="ChestRoot/PanelContainer/VBoxContainer/ScrollContainer" unique_id=307281106]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 8
+
+[node name="PlayerLabel" type="Label" parent="ChestRoot/PanelContainer/VBoxContainer" unique_id=2052819446]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_82oqn")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "Player"
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="ChestRoot/PanelContainer/VBoxContainer" unique_id=1444823679]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerGrid" type="GridContainer" parent="ChestRoot/PanelContainer/VBoxContainer/ScrollContainer2" unique_id=1955259678]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 8

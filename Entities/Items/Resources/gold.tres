@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://qjwxpros6pi1"]
+
+[ext_resource type="Texture2D" uid="uid://dqk413uoj43pv" path="res://Entities/Items/Sprites/InvIcons/sGoldOreInv.png" id="1_cnu2e"]
+[ext_resource type="Texture2D" uid="uid://bx8mf6o7j5rrr" path="res://Entities/Items/Sprites/Resources/sGoldDrop.png" id="2_puwv3"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="3_cnu2e"]
+
+[resource]
+script = ExtResource("3_cnu2e")
+item_id = "gold"
+type = 2
+icon_inv = ExtResource("1_cnu2e")
+icon_world = ExtResource("2_puwv3")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

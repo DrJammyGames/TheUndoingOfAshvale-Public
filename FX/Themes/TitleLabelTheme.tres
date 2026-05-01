@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://bm4rgr7o8i8eo"]
+
+[ext_resource type="FontFile" uid="uid://bdmpjwc2gjrmv" path="res://UI/Font/m6x11plus.ttf" id="2_dup3f"]
+
+[resource]
+default_font = ExtResource("2_dup3f")
+default_font_size = 27
+Label/colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+Label/colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 27

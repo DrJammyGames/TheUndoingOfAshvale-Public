@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://d2es3x728kbso"]
+
+[ext_resource type="Texture2D" uid="uid://6fo1gkwp12f7" path="res://Entities/Items/Sprites/Resources/sHerb.png" id="1_d8dmp"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_ksdjj"]
+
+[resource]
+script = ExtResource("1_ksdjj")
+item_id = "herb"
+type = 2
+icon_inv = ExtResource("1_d8dmp")
+icon_world = ExtResource("1_d8dmp")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

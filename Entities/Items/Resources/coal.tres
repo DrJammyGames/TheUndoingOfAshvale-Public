@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://pmdu1fq4d6ot"]
+
+[ext_resource type="Texture2D" uid="uid://dgymb2obmkfxn" path="res://Entities/Items/Sprites/InvIcons/sCoalOreInv.png" id="1_jva4o"]
+[ext_resource type="Texture2D" uid="uid://d26pjhdtlxhju" path="res://Entities/Items/Sprites/Resources/sCoalDrop.png" id="2_8o1vf"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="3_jva4o"]
+
+[resource]
+script = ExtResource("3_jva4o")
+item_id = "coal"
+type = 2
+icon_inv = ExtResource("1_jva4o")
+icon_world = ExtResource("2_8o1vf")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

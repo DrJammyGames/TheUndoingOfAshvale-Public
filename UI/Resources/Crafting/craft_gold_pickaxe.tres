@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="RecipeDataResource" format=3 uid="uid://bv4oxw56uk4yb"]
+
+[ext_resource type="Script" uid="uid://c76cib2uqwufp" path="res://UI/Scripts/Crafting/RecipeIngredientData.gd" id="1_7hqf3"]
+[ext_resource type="Resource" uid="uid://5i0mcr3d64dq" path="res://Entities/Items/Resources/gold_ingot.tres" id="2_njba3"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="3_c1p3m"]
+[ext_resource type="Resource" uid="uid://cwue8f6omyxwu" path="res://Entities/Items/Resources/gold_pickaxe.tres" id="4_7hqf3"]
+[ext_resource type="Script" uid="uid://bkfkn6ullfvu2" path="res://UI/Scripts/Crafting/RecipeDataResource.gd" id="5_texgi"]
+
+[sub_resource type="Resource" id="Resource_n7efc"]
+script = ExtResource("1_7hqf3")
+item = ExtResource("2_njba3")
+amount = 2
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[sub_resource type="Resource" id="Resource_tgoix"]
+script = ExtResource("1_7hqf3")
+item = ExtResource("3_c1p3m")
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[resource]
+script = ExtResource("5_texgi")
+recipe_id = "craft_gold_pickaxe"
+recipe_type = 1
+result_item = ExtResource("4_7hqf3")
+ingredients = Array[ExtResource("1_7hqf3")]([SubResource("Resource_n7efc"), SubResource("Resource_tgoix")])
+unlock_source = 1
+xp_reward = 30
+time_cost_ticks = 2.0
+required_level = 10
+metadata/_custom_type_script = "uid://bkfkn6ullfvu2"

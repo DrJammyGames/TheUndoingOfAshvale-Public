@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://wxsgqk1rgjfk"]
+
+[ext_resource type="AudioStream" uid="uid://dgyeqnwe8725j" path="res://Sounds/SFX/sndMineNodes.wav" id="1_4c1ye"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="1_hfleo"]
+[ext_resource type="Resource" uid="uid://qjwxpros6pi1" path="res://Entities/Items/Resources/gold.tres" id="1_urj8f"]
+[ext_resource type="Texture2D" uid="uid://4jby3iye78kx" path="res://UI/Sprites/EncyclopediaIcons/sMediumGoldEncyclopedia.png" id="2_n848x"]
+[ext_resource type="Texture2D" uid="uid://d2upmcginh821" path="res://Entities/Harvestables/Sprites/sDepositMediumGold.png" id="3_urj8f"]
+
+[resource]
+script = ExtResource("1_hfleo")
+harvest_id = "medium_gold_node"
+max_hits = 8
+drop_item = ExtResource("1_urj8f")
+drop_amount_min = 3
+drop_amount_max = 6
+xp_reward = 12
+required_tool = 3
+world_sprites = Array[Texture2D]([ExtResource("3_urj8f")])
+encyclopedia_icon = ExtResource("2_n848x")
+hit_sfx = ExtResource("1_4c1ye")
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

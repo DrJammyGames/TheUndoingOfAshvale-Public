@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://boftxyunuqnvu"]
+
+[ext_resource type="Texture2D" uid="uid://cfpj7blbprvap" path="res://Entities/Items/Sprites/InvIcons/sGreenSlimeCubeInv.png" id="1_ek0my"]
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="2_7nx4p"]
+[ext_resource type="Texture2D" uid="uid://dfgp0ihcdba5w" path="res://Entities/Items/Sprites/Resources/sGreenSlimeCubeDrop.png" id="2_f1pp1"]
+
+[resource]
+script = ExtResource("2_7nx4p")
+item_id = "green_slime_cube"
+type = 2
+icon_inv = ExtResource("1_ek0my")
+icon_world = ExtResource("2_f1pp1")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

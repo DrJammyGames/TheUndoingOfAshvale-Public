@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="RecipeDataResource" format=3 uid="uid://b73wff7akr81q"]
+
+[ext_resource type="Script" uid="uid://c76cib2uqwufp" path="res://UI/Scripts/Crafting/RecipeIngredientData.gd" id="1_ur5sn"]
+[ext_resource type="Script" uid="uid://bkfkn6ullfvu2" path="res://UI/Scripts/Crafting/RecipeDataResource.gd" id="2_7icdn"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="2_6454c"]
+[ext_resource type="Resource" uid="uid://cb6bj04mycpea" path="res://Entities/Items/Resources/iron.tres" id="3_w2ryf"]
+[ext_resource type="Resource" uid="uid://h2pns0jdmbws" path="res://Entities/Items/Resources/small_chest.tres" id="4_vntr1"]
+
+[sub_resource type="Resource" id="Resource_uy0a4"]
+script = ExtResource("1_ur5sn")
+item = ExtResource("2_6454c")
+amount = 8
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[sub_resource type="Resource" id="Resource_uksyy"]
+script = ExtResource("1_ur5sn")
+item = ExtResource("3_w2ryf")
+amount = 2
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[resource]
+script = ExtResource("2_7icdn")
+recipe_id = "craft_small_chest"
+recipe_type = 2
+result_item = ExtResource("4_vntr1")
+ingredients = Array[ExtResource("1_ur5sn")]([SubResource("Resource_uy0a4"), SubResource("Resource_uksyy")])
+xp_reward = 15
+metadata/_custom_type_script = "uid://bkfkn6ullfvu2"

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="HarvestableDataResource" format=3 uid="uid://bs25k1pw04le0"]
+
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="1_7n505"]
+[ext_resource type="AudioStream" uid="uid://cchwjlmrwr6b2" path="res://Sounds/SFX/sndChopWood.wav" id="1_h2w0q"]
+[ext_resource type="Script" uid="uid://5f7e3ojf4ai2" path="res://Entities/Harvestables/Scripts/HarvestableDataResource.gd" id="2_7n505"]
+[ext_resource type="Texture2D" uid="uid://d302mptjlhkqg" path="res://Entities/Harvestables/Sprites/sTreeStump.png" id="2_mdan0"]
+[ext_resource type="Texture2D" uid="uid://doml77jf8oxdd" path="res://UI/Sprites/EncyclopediaIcons/sTreeStumpEncyclopedia.png" id="2_mh8uw"]
+
+[resource]
+script = ExtResource("2_7n505")
+harvest_id = "tree_stump"
+max_hits = 3
+drop_item = ExtResource("1_7n505")
+drop_amount_max = 2
+required_tool = 1
+world_sprites = Array[Texture2D]([ExtResource("2_mdan0")])
+encyclopedia_icon = ExtResource("2_mh8uw")
+hit_sfx = ExtResource("1_h2w0q")
+node_size = 0
+metadata/_custom_type_script = "uid://5f7e3ojf4ai2"

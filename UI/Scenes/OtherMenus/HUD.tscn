@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://dem6w8q5n15tc"]
+
+[ext_resource type="Script" uid="uid://cqil68r43ih7d" path="res://UI/Scripts/OtherMenus/HUD.gd" id="1_jo1ms"]
+[ext_resource type="PackedScene" uid="uid://cp6i0qki2140m" path="res://UI/Scenes/OtherMenus/StatBar.tscn" id="1_sd512"]
+[ext_resource type="Resource" uid="uid://chjdfxobagivb" path="res://Entities/Player/Resources/PlayerStats.tres" id="2_psnte"]
+[ext_resource type="PackedScene" uid="uid://ba1wif75bb88c" path="res://UI/Scenes/FloatingText.tscn" id="3_4oyxi"]
+[ext_resource type="PackedScene" uid="uid://71ryloy5wn6a" path="res://UI/Scenes/Crafting/PinnedRecipeEntry.tscn" id="4_5om2a"]
+[ext_resource type="PackedScene" uid="uid://hsmyen132sdb" path="res://UI/Scenes/SignMessagePanel.tscn" id="5_5om2a"]
+[ext_resource type="PackedScene" uid="uid://ca3v1knkuq7ti" path="res://UI/Scenes/OtherMenus/DayBar.tscn" id="5_ob0ta"]
+[ext_resource type="Script" uid="uid://b6vlusdnwqbv" path="res://UI/Scripts/OtherMenus/ActionIndicator.gd" id="5_r1cgq"]
+[ext_resource type="Texture2D" uid="uid://cd0gyaoi4ed26" path="res://UI/Sprites/sItemSlot.png" id="5_u004f"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="6_lelo4"]
+[ext_resource type="PackedScene" uid="uid://nsw4w52edrx5" path="res://UI/Scenes/OtherMenus/InteractionPrompt.tscn" id="6_x7ja0"]
+[ext_resource type="PackedScene" uid="uid://dn7p1v8q2yksc" path="res://UI/Scenes/QuestArrow.tscn" id="7_aiovc"]
+[ext_resource type="Texture2D" uid="uid://buwru1ykdlsdo" path="res://UI/Sprites/sSaveIcon.png" id="8_u004f"]
+
+[node name="HUD" type="Control" unique_id=48074201]
+z_index = 1000
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_jo1ms")
+stats = ExtResource("2_psnte")
+floating_text_scene = ExtResource("3_4oyxi")
+pinned_entry_scene = ExtResource("4_5om2a")
+sign_message_panel_scene = ExtResource("5_5om2a")
+interaction_prompt_scene = ExtResource("6_x7ja0")
+
+[node name="HUDVBox" type="VBoxContainer" parent="." unique_id=845802809]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 645.0
+offset_bottom = 351.0
+theme_override_constants/separation = -4
+
+[node name="TopBar" type="HBoxContainer" parent="HUDVBox" unique_id=1559515991]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="StatsContainer" type="VBoxContainer" parent="HUDVBox/TopBar" unique_id=958255667]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HealthBar" parent="HUDVBox/TopBar/StatsContainer" unique_id=2142179554 instance=ExtResource("1_sd512")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="QuestLabel" type="Label" parent="HUDVBox/TopBar/StatsContainer" unique_id=830064801]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("6_lelo4")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/shadow_outline_size = 1
+
+[node name="PinnedRecipesContainer" type="VBoxContainer" parent="HUDVBox/TopBar/StatsContainer" unique_id=888147830]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ManaBar" parent="HUDVBox/TopBar/StatsContainer" unique_id=1374290672 instance=ExtResource("1_sd512")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+stat_name = "MP"
+
+[node name="Spacer" type="Control" parent="HUDVBox/TopBar" unique_id=1387910019]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TopRightColumn" type="VBoxContainer" parent="HUDVBox/TopBar" unique_id=2104046260]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = -4
+
+[node name="DayBar" parent="HUDVBox/TopBar/TopRightColumn" unique_id=65550939 instance=ExtResource("5_ob0ta")]
+layout_mode = 2
+alignment = 2
+
+[node name="ActionContainer" type="HBoxContainer" parent="HUDVBox/TopBar/TopRightColumn" unique_id=453209303]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+script = ExtResource("5_r1cgq")
+
+[node name="AttackIndicator" type="HBoxContainer" parent="HUDVBox/TopBar/TopRightColumn/ActionContainer" unique_id=905463798]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AttackBackground" type="TextureRect" parent="HUDVBox/TopBar/TopRightColumn/ActionContainer/AttackIndicator" unique_id=1708372459]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("5_u004f")
+stretch_mode = 5
+
+[node name="AttackIcon" type="TextureRect" parent="HUDVBox/TopBar/TopRightColumn/ActionContainer/AttackIndicator/AttackBackground" unique_id=1544473800]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+stretch_mode = 5
+
+[node name="AttackKey" type="Label" parent="HUDVBox/TopBar/TopRightColumn/ActionContainer/AttackIndicator/AttackBackground" unique_id=434416234]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 34.0
+offset_bottom = 35.0
+theme = ExtResource("6_lelo4")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="ToolIndicator" type="HBoxContainer" parent="HUDVBox/TopBar/TopRightColumn/ActionContainer" unique_id=794562643]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ToolBackground" type="TextureRect" parent="HUDVBox/TopBar/TopRightColumn/ActionContainer/ToolIndicator" unique_id=1533537013]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("5_u004f")
+stretch_mode = 5
+
+[node name="ToolIcon" type="TextureRect" parent="HUDVBox/TopBar/TopRightColumn/ActionContainer/ToolIndicator/ToolBackground" unique_id=670545689]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+stretch_mode = 5
+
+[node name="ToolKey" type="Label" parent="HUDVBox/TopBar/TopRightColumn/ActionContainer/ToolIndicator/ToolBackground" unique_id=1086496433]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 34.0
+offset_bottom = 34.0
+theme = ExtResource("6_lelo4")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="BottomBar" type="Control" parent="HUDVBox" unique_id=1964584580]
+layout_mode = 2
+
+[node name="MessageLabel" type="Label" parent="HUDVBox" unique_id=8676577]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme = ExtResource("6_lelo4")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FloatingText" type="Control" parent="HUDVBox" unique_id=562948242]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme = ExtResource("6_lelo4")
+
+[node name="SignMessages" type="Control" parent="HUDVBox" unique_id=920078069]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="QuestArrow" parent="." unique_id=1313215594 instance=ExtResource("7_aiovc")]
+layout_mode = 1
+
+[node name="SaveIndicator" type="Control" parent="." unique_id=1672214042]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="SaveIndicator" unique_id=112462310]
+layout_mode = 0
+offset_left = -139.0
+offset_top = -57.0
+offset_right = 13.0
+offset_bottom = -2.0
+
+[node name="TextureRect" type="TextureRect" parent="SaveIndicator/HBoxContainer" unique_id=1094589382]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("8_u004f")
+stretch_mode = 5
+
+[node name="SavedLabel" type="Label" parent="SaveIndicator/HBoxContainer" unique_id=1999459214]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("6_lelo4")
+theme_override_colors/font_color = Color(1, 0.9607843, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+text = "Save Complete!"
+horizontal_alignment = 1

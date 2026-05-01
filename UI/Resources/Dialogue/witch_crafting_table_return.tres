@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://ohub2evf3klo"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_geoue"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_6llqj"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_m21ct"]
+
+[sub_resource type="Resource" id="Resource_ggcrn"]
+script = ExtResource("1_geoue")
+speaker_id = 3
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_2svu4"]
+script = ExtResource("1_geoue")
+speaker_id = 3
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_6llqj")
+dialogue_id = "witch_crafting_table_return"
+npc_id = 2
+for_quest_id = "q_witch_crafting_table"
+quest_state = 2
+min_step_index = 2
+max_step_index = 2
+lines = Array[ExtResource("1_geoue")]([SubResource("Resource_ggcrn"), SubResource("Resource_2svu4")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

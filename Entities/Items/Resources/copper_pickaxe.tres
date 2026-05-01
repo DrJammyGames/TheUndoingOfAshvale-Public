@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDataResource" format=3 uid="uid://dcl1tbmf8i0sb"]
+
+[ext_resource type="Script" uid="uid://c4uqr83nc1lsy" path="res://Entities/Items/Scripts/ItemDataResource.gd" id="1_jyd34"]
+[ext_resource type="Texture2D" uid="uid://br6tntjwcp4pw" path="res://Entities/Items/Sprites/Tools/sCopperPickaxe.png" id="1_plp5p"]
+
+[resource]
+script = ExtResource("1_jyd34")
+item_id = "copper_pickaxe"
+type = 4
+value = 75
+tool_category = 4
+base_power = 3
+time_cost = 1.5
+icon_inv = ExtResource("1_plp5p")
+icon_world = ExtResource("1_plp5p")
+metadata/_custom_type_script = "uid://c4uqr83nc1lsy"

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://kjow6wrsi7ca"]
+
+[ext_resource type="Script" uid="uid://beeey4sm0mdxc" path="res://UI/Scripts/Quests/QuestLogEntry.gd" id="1_pksr6"]
+[ext_resource type="Theme" uid="uid://bm4rgr7o8i8eo" path="res://FX/Themes/TitleLabelTheme.tres" id="2_plhjd"]
+[ext_resource type="FontFile" uid="uid://bdmpjwc2gjrmv" path="res://UI/Font/m6x11plus.ttf" id="3_ridwj"]
+[ext_resource type="Theme" uid="uid://hyxhlo2aviai" path="res://FX/Themes/NormalLabelTheme.tres" id="4_83n3l"]
+[ext_resource type="Texture2D" uid="uid://c8a58egp272wq" path="res://UI/Sprites/sCheckmark.png" id="5_ridwj"]
+
+[node name="QuestLogEntry" type="VBoxContainer" unique_id=1268525267]
+custom_minimum_size = Vector2(310, 140)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -22.5
+offset_right = 20.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pksr6")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1089578350]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme = ExtResource("2_plhjd")
+theme_override_colors/font_color = Color(0.99215686, 0.9647059, 0.9098039, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("3_ridwj")
+theme_override_font_sizes/font_size = 27
+
+[node name="StepList" type="VBoxContainer" parent="." unique_id=1220207773]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="StepTemplate" type="HBoxContainer" parent="StepList" unique_id=816962607]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="StepLabel" type="Label" parent="StepList/StepTemplate" unique_id=67337880]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_83n3l")
+theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.78431374, 1)
+theme_override_colors/font_shadow_color = Color(0.11764706, 0.078431375, 0.0627451, 1)
+
+[node name="Checkmark" type="TextureRect" parent="StepList/StepTemplate" unique_id=692292423]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture = ExtResource("5_ridwj")
+expand_mode = 3
+stretch_mode = 5

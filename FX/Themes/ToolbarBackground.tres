@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://c34yart5kp7dc"]
+
+[ext_resource type="Texture2D" uid="uid://dsuipr5upajed" path="res://UI/Sprites/sMenuBackground.png" id="1_bsvj1"]
+
+[resource]
+texture = ExtResource("1_bsvj1")
+texture_margin_left = 28.0
+texture_margin_top = 28.0
+texture_margin_right = 28.0
+texture_margin_bottom = 28.0
+modulate_color = Color(0.8627451, 0.74509805, 0.627451, 1)

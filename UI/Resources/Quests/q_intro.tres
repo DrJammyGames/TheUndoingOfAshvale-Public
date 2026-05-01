@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="QuestDataResource" format=3 uid="uid://du5jrf8rlfnrs"]
+
+[ext_resource type="Script" uid="uid://bopnb8lkb8atb" path="res://UI/Scripts/Quests/QuestDataResource.gd" id="1_pn7qx"]
+[ext_resource type="Script" uid="uid://dhvb73tym44qf" path="res://UI/Scripts/Quests/QuestStepsResource.gd" id="2_1fn4d"]
+
+[sub_resource type="Resource" id="Resource_pn7qx"]
+script = ExtResource("2_1fn4d")
+condition_value = "caretaker"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_1fn4d"]
+script = ExtResource("2_1fn4d")
+condition_value = "blacksmith"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_4l5pe"]
+script = ExtResource("2_1fn4d")
+condition_value = "witch"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[sub_resource type="Resource" id="Resource_k34ov"]
+script = ExtResource("2_1fn4d")
+condition_value = "caretaker"
+metadata/_custom_type_script = "uid://dhvb73tym44qf"
+
+[resource]
+script = ExtResource("1_pn7qx")
+quest_id = "q_intro"
+xp_reward = 25
+steps = Array[ExtResource("2_1fn4d")]([SubResource("Resource_pn7qx"), SubResource("Resource_1fn4d"), SubResource("Resource_4l5pe"), SubResource("Resource_k34ov")])
+metadata/_custom_type_script = "uid://bopnb8lkb8atb"

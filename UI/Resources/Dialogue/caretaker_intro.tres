@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://box8krxskmdmu"]
+
+[ext_resource type="Script" uid="uid://j86e006xqtwj" path="res://UI/Scripts/Dialogue/DialogueLineResource.gd" id="1_elv5y"]
+[ext_resource type="Script" uid="uid://3akldadaa1dw" path="res://UI/Scripts/Dialogue/DialogueChoiceResource.gd" id="2_1h7lc"]
+[ext_resource type="Script" uid="uid://xlk0vqoikqt4" path="res://UI/Scripts/Dialogue/DialogueResource.gd" id="2_36q2b"]
+
+[sub_resource type="Resource" id="Resource_7t63t"]
+script = ExtResource("1_elv5y")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_by5ry"]
+script = ExtResource("1_elv5y")
+speaker_id = 0
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_36q2b"]
+script = ExtResource("1_elv5y")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[sub_resource type="Resource" id="Resource_1h7lc"]
+script = ExtResource("1_elv5y")
+metadata/_custom_type_script = "uid://j86e006xqtwj"
+
+[resource]
+script = ExtResource("2_36q2b")
+dialogue_id = "caretaker_intro"
+for_quest_id = "q_intro"
+min_step_index = 0
+max_step_index = 0
+lines = Array[ExtResource("1_elv5y")]([SubResource("Resource_7t63t"), SubResource("Resource_by5ry"), SubResource("Resource_36q2b"), SubResource("Resource_1h7lc")])
+metadata/_custom_type_script = "uid://xlk0vqoikqt4"

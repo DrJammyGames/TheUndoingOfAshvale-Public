@@ -1,0 +1,87 @@
+keys,en
+item.potion_health_small.name,Small Health Potion
+item.potion_health_small.description,"A simple remedy brewed from common herbs. Restores a small amount of health."
+item.potion_health_medium.name,Medium Health Potion
+item.potion_health_medium.description,"A well-made tonic used by travellers and soldiers alike. Restores a decent amount of health."
+item.potion_health_large.name,Large Health Potion
+item.potion_health_large.description,"A potent restorative rarely found outside an Alchemist's stock. Restores a large amount of health."
+item.potion_mana_small.name,Small Mana Potion
+item.potion_mana_small.description,Restores a small amount of mana.
+item.potion_mana_medium.name,Medium Mana Potion
+item.potion_mana_medium.description,Restores a medium amount of mana.
+item.potion_mana_large.name,Large Mana Potion
+item.potion_mana_large.description,Restores a large amount of mana.
+item.wood.name,Wood
+item.wood.description,"Timber from the trees around Ashvale. Solid and useful, the town is sure to need a lot of it."
+item.stone.name,Stone
+item.stone.description,"Stone from rocks around Ashvale. Useful for crafting and building."
+item.adamantite.name,Adamantite
+item.adamantite.description,"An exceptionally hard ore. Difficult to work with, but the results are worth it."
+item.coal.name,Coal
+item.coal.description,"Burns long and hot. Useful for smelting or keeping a forge alive."
+item.copper.name,Copper
+item.copper.description,"A common ore with a warm, reddish hue. A reliable starting point for new tools."
+item.diamond.name,Diamond
+item.diamond.description,"Harder than anything else found in these areas. It rarely surfaces, be sure not to waste it."
+item.gold.name,Gold
+item.gold.description,"Valuable ore useful for upgrading tools. More durable than iron or copper."
+item.iron.name,Iron
+item.iron.description,"The middle tier of ore used for upgrading tools. It is strong, yet easily workable."
+item.mithril.name,Mithril
+item.mithril.description,"A mystical ore with unusual lightness. It is said to hold an enchantment longer than ordinary metal."
+item.silver.name,Silver
+item.silver.description,"Cool to the touch and slow to tarnish. Prized by craftspeople and wary travellers both."
+item.tin.name,Tin
+item.tin.description,"A soft, pliable ore often used in decoration crafting."
+item.key_rusty.name,Rusty Key
+item.key_rusty.description,"Well worn and spotted with rust. It looks like it opens something important."
+item.basic_axe.name,Basic Axe
+item.basic_axe.description,"A study wood-cutting axe. It's seen some use, but the edge still holds. Simply approach a tree and press the use tool button."
+item.basic_pickaxe.name,Basic Pickaxe
+item.basic_pickaxe.description,"Built for breaking stone and ore. Heavy, reliable, and not subtle about it. Simply approach some ore and press the use tool button."
+item.basic_sword.name,Basic Sword
+item.basic_sword.description,"A straightforward blade. It won't win any prizes, but it'll do the job."
+item.green_slime_cube.name,Green Slime Cube
+item.green_slime_cube.description,"Gelatinous and faintly luminous. An alchemist would find a use for this."
+item.stone.name,Stone
+item.stone.description,"Rough-cut stone pulled from the ground. Ashvale was built on it once, and will be again."
+item.iron_ingot.name,Iron Ingot
+item.iron_ingot.description,"Smelted from iron ore. The most common metal in Ashvale, and a reliable starting point."
+item.copper_ingot.name,Copper Ingot
+item.copper_ingot.description,"Smelted from copper ore. Warmer and harder to come by than iron."
+item.silver_ingot.name,Silver Ingot
+item.silver_ingot.description,"Smelted from silver ore. Cool to the touch, even after the forge. Not easy to find."
+item.gold_ingot.name,Gold Ingot
+item.gold_ingot.description,"Smelted from gold ore. Used for the best of tools."
+item.iron_sword.name,Iron Sword
+item.iron_sword.description,"A solid starter blade. Forged from iron and built to last."
+item.iron_pickaxe.name,Iron Pickaxe
+item.iron_pickaxe.description,"A dependable pickaxe. Gets through most stone and ore without complaint."
+item.iron_axe.name,Iron Axe
+item.iron_axe.description,"A straightforward iron axe. Heavy enough to fell most trees in a few swings."
+item.copper_sword.name,Copper Sword
+item.copper_sword.description,"A step up from iron. The edge holds longer and the balance is noticeably better."
+item.copper_pickaxe.name,Copper Pickaxe
+item.copper_pickaxe.description,"Harder and sharper than iron. Opens up veins the starter pickaxe struggles with."
+item.copper_axe.name,Copper Axe
+item.copper_axe.description,"Cuts cleaner than iron and lasts longer. Worth the extra effort to forge."
+item.silver_sword.name,Silver Sword
+item.silver_sword.description,"A finely crafted blade. Harder to make, but the edge holds far longer than copper."
+item.silver_pickaxe.name,Silver Pickaxe
+item.silver_pickaxe.description,"Precise and durable. Gets through anything copper and iron struggle with."
+item.silver_axe.name,Silver Axe
+item.silver_axe.description,"Light for its strength. A skilled woodcutter's preferred tool."
+item.gold_sword.name,Gold Sword
+item.gold_sword.description,"A sturdy blade forged to fight monsters."
+item.gold_axe.name,Gold Axe
+item.gold_axe.description,"A lightweight axe for chopping down any tree."
+item.gold_pickaxe.name,Gold Pickaxe
+item.gold_pickaxe.description,"A lightweight pickaxe perfect for those tougher ores."
+item.herb.name,Herb
+item.herb.description,"A handful of foraged herbs, dried and bundled. Smells earthy."
+item.empty_vial.name,Empty Vial
+item.empty_vial.description,"A small glass vial, clean and stoppered. Ready to hold something useful."
+item.small_chest.name,Small Chest
+item.small_chest.description,"A small, study wooden chest for storing your belongings. You can access your entire storage from any chest."
+item.crafting_table.name,Crafting Table
+item.crafting_table.description,"A sturdy table for crafting potions and other useful items, including furniture."

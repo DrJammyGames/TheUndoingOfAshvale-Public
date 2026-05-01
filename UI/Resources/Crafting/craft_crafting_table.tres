@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RecipeDataResource" format=3 uid="uid://dogb866l242tp"]
+
+[ext_resource type="Script" uid="uid://c76cib2uqwufp" path="res://UI/Scripts/Crafting/RecipeIngredientData.gd" id="1_s3gl0"]
+[ext_resource type="Resource" uid="uid://bk2u2vwfhavyb" path="res://Entities/Items/Resources/wood.tres" id="2_kcqns"]
+[ext_resource type="Script" uid="uid://bkfkn6ullfvu2" path="res://UI/Scripts/Crafting/RecipeDataResource.gd" id="2_ptx37"]
+[ext_resource type="Resource" uid="uid://ckkcxnm0i3hxv" path="res://Entities/Items/Resources/crafting_table.tres" id="3_evst6"]
+
+[sub_resource type="Resource" id="Resource_vkv6o"]
+script = ExtResource("1_s3gl0")
+item = ExtResource("2_kcqns")
+amount = 5
+metadata/_custom_type_script = "uid://c76cib2uqwufp"
+
+[resource]
+script = ExtResource("2_ptx37")
+recipe_id = "craft_crafting_table"
+recipe_type = 2
+result_item = ExtResource("3_evst6")
+ingredients = Array[ExtResource("1_s3gl0")]([SubResource("Resource_vkv6o")])
+unlock_source = 4
+xp_reward = 15
+metadata/_custom_type_script = "uid://bkfkn6ullfvu2"
