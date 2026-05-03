@@ -122,10 +122,8 @@ DataFiles/
 │   ├── QuestPreloadRegistry.gd
 │   ├── NPCPreloadRegistry.gd
 │   └── RecipePreloadRegistry.gd
-├── JSONs/
-│   └── UIData.json                  # UI string data (generated from CSV)
 ├── LocalisationCSVs/
-│   ├── UIStringsText.csv            # Source for UIData.json
+│   ├── UIStringsText.csv            # Source for UIDatabaseStrings
 │   └── *.csv                        # Content-specific localisation tables
 └── TranslationFiles/                # Compiled .translation binaries
 
