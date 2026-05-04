@@ -46,11 +46,10 @@ Autoloads are organised into five layers:
 | Layer | Autoloads | Responsibility |
 |---|---|---|
 | **Orchestration** | `Game` | Scene transitions, input lock stack, player lifecycle, game-level flow |
-| **Systems** | `QuestSystem`, `InventorySystem`, `LevelSystem`, `CraftingSystem`, `DialogueSystem`, `DayNightSystem`, `ChestStorageSystem`, `DecorationSystem`, `EncyclopediaSystem`, `InteractionSystem`, `WorldFlags`, `WorldDrops` | Domain-specific state and logic, each with a clean public API |
-| **UI** | `UIRouter`, `GlobalTooltip` | All screen/overlay instantiation and modal stack management |
+| **Systems** | `QuestSystem`, `InventorySystem`, `LevelSystem`, `CraftingSystem`, `DialogueSystem`, `DayNightSystem`, `ChestStorageSystem`, `DecorationSystem`, `EncyclopediaSystem`, `InteractionSystem`, `WorldDrops`, `AudioManager` | Domain-specific state and logic, each with a clean public API |
+| **UI** | `UIRouter`, `GlobalTooltip`, `VisualFX`, `Analytics` | All screen/overlay instantiation and modal stack management |
 | **Content** | `ItemDatabase`, `QuestDatabase`, `DialogueDatabase`, `EnemyDatabase`, `HarvestableDatabase`, `NPCDatabase`, `RecipeDatabase`, `UIStringsDatabase` | Runtime content indexing from preloaded registries |
-| **Data** | `GameState`, `Settings` | Runtime state for serialisation and player preferences |
-| **Effects** | `VisualFX`, `AudioManager`, `Analytics` | Visual feedback, audio, and telemetry |
+| **Data** | `GameState`, `Settings`, `WorldFlags` | Runtime state for serialisation and player preferences |
 
 ### Content Pipeline
 
